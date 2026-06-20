@@ -1,7 +1,54 @@
 function createStackTags(stack) {
-  return stack
-    .map((s) => `<span class="stack-tag">${s}</span>`)
-    .join("");
+  return stack.map((s) => `<span class="stack-tag">${s}</span>`).join("");
+}
+
+function renderSkills() {
+  const grid = document.getElementById("skillsGrid");
+  grid.innerHTML = SKILLS.map(
+    (group) => `
+    <div class="skill-group">
+      <h3>${group.group}</h3>
+      <ul>
+        ${group.items.map((item) => `<li>${item}</li>`).join("")}
+      </ul>
+    </div>
+  `
+  ).join("");
+}
+
+function renderExperience() {
+  const timeline = document.getElementById("experienceTimeline");
+  timeline.innerHTML = EXPERIENCE.map(
+    (job) => `
+    <article class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">${job.date}</span>
+        <h3>${job.title}</h3>
+        <p class="timeline-org">${job.org}</p>
+        <ul class="timeline-highlights">
+          ${job.highlights.map((h) => `<li>${h}</li>`).join("")}
+        </ul>
+      </div>
+    </article>
+  `
+  ).join("");
+}
+
+function renderCertifications() {
+  const grid = document.getElementById("certGrid");
+  grid.innerHTML = CERTIFICATIONS.map(
+    (cert) => `
+    <article class="cert-card">
+      <div class="cert-header">
+        <h3>${cert.name}</h3>
+        <span class="cert-year">${cert.year}</span>
+      </div>
+      <p class="cert-issuer">${cert.issuer}</p>
+      <p class="cert-focus">${cert.focus}</p>
+    </article>
+  `
+  ).join("");
 }
 
 function renderFeatured() {
@@ -16,7 +63,7 @@ function renderFeatured() {
       <h3>${p.title}</h3>
       <p>${p.description}</p>
       <div class="card-stack">${createStackTags(p.stack)}</div>
-      <span class="card-link">GitHub Repository</span>
+      <span class="card-link">GitHub Repository${p.external ? " · Live Demo available" : ""}</span>
     </a>
   `
     )
@@ -64,6 +111,7 @@ function renderProjects() {
         <h3>${p.title}</h3>
         <span class="card-icon">${CATEGORIES[p.category].icon}</span>
       </div>
+      <p class="repo-name">${p.name}</p>
       <p>${p.description}</p>
       <div class="stack-tags">${createStackTags(p.stack)}</div>
       <div class="card-links">
@@ -95,8 +143,11 @@ function initNav() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  renderSkills();
   renderFeatured();
   renderFilters();
   renderProjects();
+  renderExperience();
+  renderCertifications();
   initNav();
 });

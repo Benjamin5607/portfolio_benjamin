@@ -21,9 +21,10 @@ npx serve .
 
 - `index.html` — Main page
 - `styles.css` — Styling
-- `projects.js` — Project data (categories, descriptions, links)
+- `profile.js` — Skills, certifications, experience data
+- `projects.js` — Project data (categories, descriptions, tech stacks, links)
 - `script.js` — Rendering & interactions
 
 ## Customize
 
-Edit `projects.js` to add/remove projects or update descriptions.
+Edit `profile.js` for skills/certs/experience and `projects.js` for project entries.
