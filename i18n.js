@@ -551,10 +551,17 @@ const AI_SKILLS_I18N = {
 
 function getProfile(lang) {
   const base = LINKEDIN_EN;
-  if (lang === "en") return base;
+  const expI18n = EXPERIENCE_I18N[lang] || [];
+
+  const experience = base.experience.map((job, i) => ({
+    ...job,
+    company: getCompany(job.companyId, lang),
+    highlights: (lang === "en" ? job.highlights : expI18n[i]?.highlights) || job.highlights,
+  }));
+
+  if (lang === "en") return { ...base, experience };
 
   const t = I18N[lang]?.profile || {};
-  const expI18n = EXPERIENCE_I18N[lang] || [];
 
   return {
     ...base,
@@ -566,11 +573,7 @@ function getProfile(lang) {
     location: t.location || base.location,
     languages: t.languages || base.languages,
     education: t.education || base.education,
-    experience: base.experience.map((job, i) => ({
-      ...job,
-      company: getCompany(job.companyId, lang),
-      highlights: expI18n[i]?.highlights || job.highlights,
-    })),
+    experience,
   };
 }
 
