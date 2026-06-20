@@ -101,6 +101,7 @@ const LINKEDIN_EN = {
       id: "bytedance",
       name: "ByteDance",
       domain: "bytedance.com",
+      logo: "assets/logos/bytedance.svg",
       industry: "Software · Internet",
       summary:
         "Global technology company behind TikTok and Douyin. Builds platforms that inspire creativity and enrich life across 68+ countries.",
@@ -110,6 +111,7 @@ const LINKEDIN_EN = {
       id: "webhelp",
       name: "Webhelp APAC",
       domain: "webhelp.com",
+      logo: "assets/logos/webhelp.svg",
       industry: "CX · BPO · Outsourcing",
       summary:
         "International customer experience and BPO provider. Partnered with Google for Workspace and Google Home technical support across APAC.",
@@ -119,6 +121,7 @@ const LINKEDIN_EN = {
       id: "accenture",
       name: "Accenture",
       domain: "accenture.com",
+      logo: "assets/logos/accenture.svg",
       industry: "Consulting · Technology Services",
       summary:
         "Global professional services firm in strategy, consulting, technology, and operations — including YouTube platform operations support.",
@@ -128,6 +131,7 @@ const LINKEDIN_EN = {
       id: "hwaseung",
       name: "Hwaseung R&A",
       domain: "hwaseung.co.kr",
+      logo: "assets/logos/hwaseung.svg",
       industry: "Automotive · Manufacturing",
       summary:
         "South Korean automotive parts manufacturer specializing in motor vehicle components and production line operations.",

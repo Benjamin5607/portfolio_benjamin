@@ -140,7 +140,7 @@ function renderExperience() {
             ? `
         <div class="company-card">
           <div class="company-logo-wrap">
-            <img class="company-logo" src="https://logo.clearbit.com/${c.domain}" alt="${c.name}" loading="lazy" onerror="this.closest('.company-logo-wrap').classList.add('is-fallback');this.remove();" />
+            <img class="company-logo" src="${c.logo}" alt="${c.name}" loading="lazy" onerror="this.closest('.company-logo-wrap').classList.add('is-fallback');this.remove();" />
             <span class="company-logo-fallback" aria-hidden="true">${c.name.charAt(0)}</span>
           </div>
           <div class="company-info">
