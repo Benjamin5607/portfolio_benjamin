@@ -96,8 +96,47 @@ const LINKEDIN_EN = {
     { name: "Getting Started with Azure", issuer: "Coursera", issued: "Jun 2021" },
     { name: "Getting Started with Google Workspace", issuer: "Coursera / Google", issued: "Jun 2021" },
   ],
+  companies: {
+    bytedance: {
+      id: "bytedance",
+      name: "ByteDance",
+      domain: "bytedance.com",
+      industry: "Software · Internet",
+      summary:
+        "Global technology company behind TikTok and Douyin. Builds platforms that inspire creativity and enrich life across 68+ countries.",
+      meta: "25K+ employees · Founded 2012 · Beijing, China",
+    },
+    webhelp: {
+      id: "webhelp",
+      name: "Webhelp APAC",
+      domain: "webhelp.com",
+      industry: "CX · BPO · Outsourcing",
+      summary:
+        "International customer experience and BPO provider. Partnered with Google for Workspace and Google Home technical support across APAC.",
+      meta: "10K+ employees · Paris HQ · 94 countries",
+    },
+    accenture: {
+      id: "accenture",
+      name: "Accenture",
+      domain: "accenture.com",
+      industry: "Consulting · Technology Services",
+      summary:
+        "Global professional services firm in strategy, consulting, technology, and operations — including YouTube platform operations support.",
+      meta: "400K+ employees · Dublin HQ · 174 countries",
+    },
+    hwaseung: {
+      id: "hwaseung",
+      name: "Hwaseung R&A",
+      domain: "hwaseung.co.kr",
+      industry: "Automotive · Manufacturing",
+      summary:
+        "South Korean automotive parts manufacturer specializing in motor vehicle components and production line operations.",
+      meta: "100+ employees · Yangsan, South Korea",
+    },
+  },
   experience: [
     {
+      companyId: "bytedance",
       date: "Mar 2023 — Present",
       title: "Partner Program Manager / Trust&Safety",
       org: "ByteDance · WP. Kuala Lumpur",
@@ -108,6 +147,7 @@ const LINKEDIN_EN = {
       ],
     },
     {
+      companyId: "bytedance",
       date: "Apr 2022 — Mar 2023",
       title: "Partner Operations Manager",
       org: "ByteDance · Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
@@ -118,6 +158,7 @@ const LINKEDIN_EN = {
       ],
     },
     {
+      companyId: "webhelp",
       date: "Jan 2019 — Mar 2022",
       title: "Operations Team Lead",
       org: "Webhelp APAC · Kuala Lumpur",
@@ -128,6 +169,7 @@ const LINKEDIN_EN = {
       ],
     },
     {
+      companyId: "webhelp",
       date: "Jan 2019 — Jun 2019",
       title: "AI Device Technical Support",
       org: "Webhelp APAC · Kuala Lumpur, Malaysia",
@@ -137,6 +179,7 @@ const LINKEDIN_EN = {
       ],
     },
     {
+      companyId: "accenture",
       date: "Nov 2016 — Nov 2018",
       title: "Business Operations Specialist",
       org: "Accenture · Kuala Lumpur",
@@ -147,6 +190,7 @@ const LINKEDIN_EN = {
       ],
     },
     {
+      companyId: "hwaseung",
       date: "Oct 2015 — Sep 2016",
       title: "Assistant Production Manager",
       org: "Hwaseung R&A · Enterprise, Alabama, United States",

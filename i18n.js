@@ -238,6 +238,89 @@ const I18N = {
 };
 
 /* Experience translations */
+const COMPANIES_I18N = {
+  ko: {
+    bytedance: {
+      industry: "소프트웨어 · 인터넷",
+      summary:
+        "TikTok·Douyin을 운영하는 글로벌 테크 기업. 68개국 이상에서 창의력과 삶을 풍요롭게 하는 플랫폼을 구축.",
+      meta: "직원 2.5만+ · 2012년 설립 · 중국 베이징",
+    },
+    webhelp: {
+      industry: "CX · BPO · 아웃소싱",
+      summary:
+        "글로벌 고객경험·BPO 기업. Google Workspace 및 Google Home 기술 지원을 APAC에서 파트너십 운영.",
+      meta: "직원 1만+ · 파리 본사 · 94개국",
+    },
+    accenture: {
+      industry: "컨설팅 · 기술 서비스",
+      summary:
+        "전략·컨설팅·기술·운영 분야의 글로벌 프로페셔널 서비스 기업 — YouTube 플랫폼 운영 지원 포함.",
+      meta: "직원 40만+ · 더블린 본사 · 174개국",
+    },
+    hwaseung: {
+      industry: "자동차 · 제조",
+      summary: "자동차 부품 제조 및 생산 라인 운영에 특화된 한국 자동차 부품 제조 기업.",
+      meta: "직원 100+ · 양산, 대한민국",
+    },
+  },
+  zh: {
+    bytedance: {
+      industry: "软件 · 互联网",
+      summary: "TikTok 与抖音背后的全球科技公司，在 68+ 国家构建激发创造力、丰富生活的平台。",
+      meta: "2.5万+ 员工 · 2012 年成立 · 北京",
+    },
+    webhelp: {
+      industry: "客户体验 · BPO · 外包",
+      summary: "国际客户体验与 BPO 服务商，在 APAC 与 Google 合作提供 Workspace 与 Google Home 技术支持。",
+      meta: "1万+ 员工 · 巴黎总部 · 94 国",
+    },
+    accenture: {
+      industry: "咨询 · 技术服务",
+      summary: "全球专业服务公司，涵盖战略、咨询、技术与运营 — 包括 YouTube 平台运营支持。",
+      meta: "40万+ 员工 · 都柏林总部 · 174 国",
+    },
+    hwaseung: {
+      industry: "汽车 · 制造",
+      summary: "韩国汽车零部件制造商，专注于汽车零部件与生产线运营。",
+      meta: "100+ 员工 · 韩国梁山",
+    },
+  },
+  ja: {
+    bytedance: {
+      industry: "ソフトウェア · インターネット",
+      summary:
+        "TikTok・Douyin を運営するグローバルテック企業。68カ国以上で創造性と生活を豊かにするプラットフォームを構築。",
+      meta: "従業員 2.5万+ · 2012年設立 · 北京",
+    },
+    webhelp: {
+      industry: "CX · BPO · アウトソーシング",
+      summary:
+        "グローバルなカスタマーエクスペリエンス・BPO プロバイダー。APAC で Google Workspace・Google Home 技術サポートをパートナー運用。",
+      meta: "従業員 1万+ · パリ本社 · 94カ国",
+    },
+    accenture: {
+      industry: "コンサルティング · 技術サービス",
+      summary:
+        "戦略・コンサルティング・技術・運用のグローバルプロフェッショナルサービス — YouTube プラットフォーム運用支援を含む。",
+      meta: "従業員 40万+ · ダブリン本社 · 174カ国",
+    },
+    hwaseung: {
+      industry: "自動車 · 製造",
+      summary: "自動車部品製造と生産ライン運用に特化した韓国の自動車部品メーカー。",
+      meta: "従業員 100+ · 韓国梁山",
+    },
+  },
+};
+
+function getCompany(companyId, lang) {
+  const base = LINKEDIN_EN.companies?.[companyId];
+  if (!base) return null;
+  if (lang === "en") return base;
+  const t = COMPANIES_I18N[lang]?.[companyId] || {};
+  return { ...base, ...t };
+}
+
 const EXPERIENCE_I18N = {
   ko: [
     { highlights: [
@@ -485,6 +568,7 @@ function getProfile(lang) {
     education: t.education || base.education,
     experience: base.experience.map((job, i) => ({
       ...job,
+      company: getCompany(job.companyId, lang),
       highlights: expI18n[i]?.highlights || job.highlights,
     })),
   };

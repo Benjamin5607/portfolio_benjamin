@@ -123,19 +123,42 @@ function renderSkills() {
 
 function renderExperience() {
   const profile = getProfile(currentLang);
+  let lastCompanyId = null;
+
   document.getElementById("experienceTimeline").innerHTML = profile.experience
-    .map(
-      (job) => `
+    .map((job) => {
+      const showCompany = job.companyId !== lastCompanyId;
+      lastCompanyId = job.companyId;
+      const c = job.company;
+
+      return `
     <article class="timeline-item">
       <div class="timeline-marker"></div>
       <div class="timeline-content">
+        ${
+          showCompany && c
+            ? `
+        <div class="company-card">
+          <div class="company-logo-wrap">
+            <img class="company-logo" src="https://logo.clearbit.com/${c.domain}" alt="${c.name}" loading="lazy" onerror="this.closest('.company-logo-wrap').classList.add('is-fallback');this.remove();" />
+            <span class="company-logo-fallback" aria-hidden="true">${c.name.charAt(0)}</span>
+          </div>
+          <div class="company-info">
+            <h4 class="company-name">${c.name}</h4>
+            <p class="company-industry">${c.industry}</p>
+            <p class="company-summary">${c.summary}</p>
+            <p class="company-meta">${c.meta}</p>
+          </div>
+        </div>`
+            : ""
+        }
         <span class="timeline-date">${job.date}</span>
         <h3>${job.title}</h3>
         <p class="timeline-org">${job.org}</p>
         <ul class="timeline-highlights">${job.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>
       </div>
-    </article>`
-    )
+    </article>`;
+    })
     .join("");
 }
 

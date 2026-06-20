@@ -7,15 +7,19 @@
 }
 
 :root {
-  --bg: #0a0a0f;
-  --bg-elevated: #12121a;
-  --bg-card: #16161f;
+  --bg: #050505;
+  --bg-elevated: #0c0c0c;
+  --bg-card: #121212;
   --border: rgba(255, 255, 255, 0.08);
-  --text: #e8e6e3;
-  --text-muted: #8a8794;
-  --accent: #e8a849;
-  --accent-dim: rgba(232, 168, 73, 0.15);
-  --accent-glow: rgba(232, 168, 73, 0.25);
+  --text: #f5f5f7;
+  --text-muted: #8e8e93;
+  --accent: #fe2c55;
+  --accent-hover: #ff4d6d;
+  --accent-cyan: #25f4ee;
+  --accent-dim: rgba(254, 44, 85, 0.12);
+  --accent-glow: rgba(254, 44, 85, 0.35);
+  --accent-border: rgba(254, 44, 85, 0.28);
+  --accent-cyan-dim: rgba(37, 244, 238, 0.08);
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "DM Sans", system-ui, sans-serif;
   --radius: 12px;
@@ -46,7 +50,7 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(10, 10, 15, 0.85);
+  background: rgba(5, 5, 5, 0.88);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -153,8 +157,9 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 20% 40%, rgba(232, 168, 73, 0.08), transparent),
-    radial-gradient(ellipse 50% 40% at 80% 60%, rgba(100, 120, 255, 0.06), transparent);
+    radial-gradient(ellipse 55% 45% at 15% 35%, rgba(254, 44, 85, 0.14), transparent),
+    radial-gradient(ellipse 45% 40% at 85% 65%, rgba(37, 244, 238, 0.07), transparent),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(254, 44, 85, 0.05), transparent);
   pointer-events: none;
 }
 
@@ -214,12 +219,12 @@ body {
 
 .btn-primary {
   background: var(--accent);
-  color: var(--bg);
+  color: #fff;
 }
 
 .btn-primary:hover {
-  background: #f0b85c;
-  box-shadow: 0 0 24px var(--accent-glow);
+  background: var(--accent-hover);
+  box-shadow: 0 0 28px var(--accent-glow);
 }
 
 .btn-ghost {
@@ -628,7 +633,7 @@ body {
 }
 
 .featured-card:hover {
-  border-color: rgba(232, 168, 73, 0.3);
+  border-color: rgba(254, 44, 85, 0.3);
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
@@ -725,7 +730,7 @@ body {
 }
 
 .project-card:hover {
-  border-color: rgba(232, 168, 73, 0.2);
+  border-color: var(--accent-border);
 }
 
 .project-card.hidden {
@@ -816,8 +821,9 @@ body {
   left: 6px;
   top: 8px;
   bottom: 8px;
-  width: 1px;
-  background: var(--border);
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-cyan-dim), transparent);
+  opacity: 0.5;
 }
 
 .timeline-item {
@@ -836,8 +842,91 @@ body {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--bg);
+  background: var(--bg-elevated);
   border: 2px solid var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.company-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  background-image: linear-gradient(135deg, var(--accent-dim), transparent 55%);
+}
+
+.company-logo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.35rem;
+}
+
+.company-logo-fallback {
+  display: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.company-logo-wrap.is-fallback {
+  background: var(--accent-dim);
+  border-color: var(--accent-border);
+}
+
+.company-logo-wrap.is-fallback .company-logo-fallback {
+  display: block;
+}
+
+.company-info {
+  min-width: 0;
+}
+
+.company-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.company-industry {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.company-summary {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.company-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.85;
 }
 
 .timeline-date {
@@ -1040,5 +1129,11 @@ body {
 
   .hero-stats {
     gap: 2rem;
+  }
+
+  .company-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
