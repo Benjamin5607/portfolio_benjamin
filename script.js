@@ -46,6 +46,27 @@ function renderHero() {
   document.getElementById("statCertsValue").textContent = String(LINKEDIN_EN.certifications.length);
   document.getElementById("footerTagline").textContent = t("footer.tagline", currentLang);
   document.getElementById("footerName").textContent = LINKEDIN_EN.name;
+
+  const heroLinks = LINKEDIN_EN.websiteLinks.filter((link) => link.hero);
+  document.getElementById("heroLinks").innerHTML = `
+    <a href="#projects" class="btn btn-primary">${t("hero.ctaProjects", currentLang)}</a>
+    ${heroLinks
+      .map(
+        (link) =>
+          `<a href="${link.url}" target="_blank" rel="noopener" class="btn btn-ghost">${link.label}</a>`
+      )
+      .join("")}
+  `;
+}
+
+function renderContactLinks() {
+  const links = LINKEDIN_EN.websiteLinks.filter((link) => link.footer);
+  document.getElementById("footerLinks").innerHTML = links
+    .map(
+      (link) =>
+        `<a href="${link.url}" target="_blank" rel="noopener">${link.label}</a>`
+    )
+    .join("");
 }
 
 function renderAbout() {
@@ -56,7 +77,7 @@ function renderAbout() {
     ${profile.aboutParagraphs.map((p) => `<p>${p}</p>`).join("")}
     <p class="about-mission"><em>${profile.mission}</em></p>
     <p>${profile.location}</p>
-    <p class="linkedin-ref"><a href="https://www.linkedin.com/in/wonbin-s-34191613b/" target="_blank" rel="noopener">linkedin.com/in/wonbin-s-34191613b</a></p>
+    <p class="linkedin-ref"><a href="${LINKEDIN_EN.linkedinUrl}" target="_blank" rel="noopener">linkedin.com/in/wonbin-s-34191613b</a></p>
   `;
 
   document.getElementById("aboutCards").innerHTML = `
@@ -267,6 +288,7 @@ function renderAll() {
   renderSkills();
   renderExperience();
   renderCertifications();
+  renderContactLinks();
   renderFeatured();
   renderFilters();
   renderProjects();

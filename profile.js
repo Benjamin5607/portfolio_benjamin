@@ -5,6 +5,13 @@ const LINKEDIN_EN = {
     "Partner Program Manager @ ByteDance | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
   location: "WP. Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
   totalExperience: "8+ years",
+  linkedinUrl: "https://www.linkedin.com/in/wonbin-s-34191613b/",
+  /* LinkedIn Contact info → Websites (order & labels match profile) */
+  websiteLinks: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/wonbin-s-34191613b/", hero: true, footer: true },
+    { label: "GitHub", url: "https://github.com/Benjamin5607", hero: true, footer: true },
+    { label: "Zerro AI", url: "https://zerroai.space/", hero: false, footer: true },
+  ],
   aboutParagraphs: [
     "Partner Program Manager with 8+ years of experience in building and governing large-scale platform operations at ByteDance, Google (Webhelp), and Meta (Accenture).",
     "Currently leading global partner programs focused on data support and Trust & Safety. Specializes in transforming complex, high-risk operations into resilient, scalable programs.",
