@@ -81,16 +81,22 @@ function renderAbout() {
 function renderSkills() {
   const profile = getProfile(currentLang);
   const s = I18N[currentLang]?.sections || I18N.en.sections;
+  const aiGroups = profile.aiSkills || LINKEDIN_EN.aiSkills;
 
   document.getElementById("skillsGrid").innerHTML = `
     <div class="skill-group">
       <h3>${s.keyStrengths}</h3>
       <ul class="skill-pills">${profile.keyStrengths.map((k) => `<li>${k}</li>`).join("")}</ul>
     </div>
+    ${aiGroups
+      .map(
+        (g) => `
     <div class="skill-group">
-      <h3>${s.techFocus}</h3>
-      <ul class="skill-pills">${LINKEDIN_EN.techFocus.map((k) => `<li>${k}</li>`).join("")}</ul>
-    </div>
+      <h3>${g.group}</h3>
+      <ul class="skill-list">${g.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+    </div>`
+      )
+      .join("")}
   `;
 }
 
@@ -150,7 +156,7 @@ function buildFeaturedSlide(p, pLabels, s) {
 }
 
 function renderFeatured() {
-  const featured = PROJECTS.filter((p) => p.featured);
+  const featured = getFeaturedProjects();
   const pLabels = I18N[currentLang]?.projects || I18N.en.projects;
   const s = I18N[currentLang]?.sections || I18N.en.sections;
 

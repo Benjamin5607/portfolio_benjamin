@@ -22,10 +22,10 @@ const I18N = {
       aboutTitle: "About",
       skillsTag: "Skills",
       skillsTitle: "Skills",
-      skillsDesc: "From LinkedIn profile",
+      skillsDesc: "Agentic AI & technologies implemented across shipped projects",
       featuredTag: "Featured",
       featuredTitle: "Featured Projects",
-      featuredDesc: "Selected GitHub repositories",
+      featuredDesc: "Agentic AI — Zerro AI, Jekyll & Hyde, Emily, Mina, Pantheon, Halal Plane",
       projectsTag: "Projects",
       projectsTitle: "All Projects",
       projectsDesc: "GitHub repositories by category",
@@ -33,6 +33,7 @@ const I18N = {
       experienceTitle: "Experience",
       certsTag: "Certifications",
       certsTitle: "Licenses & Certifications",
+      certsDesc: "Project Management · Agentic AI · Cloud (current, non-expired)",
       education: "Education",
       languages: "Languages",
       keyStrengths: "Core Strengths",
@@ -80,10 +81,10 @@ const I18N = {
       aboutTitle: "소개",
       skillsTag: "역량",
       skillsTitle: "역량",
-      skillsDesc: "LinkedIn 프로필 기준",
+      skillsDesc: "실제 프로젝트에서 구현한 Agentic AI & 기술",
       featuredTag: "대표",
       featuredTitle: "대표 프로젝트",
-      featuredDesc: "선별 GitHub 리포지토리",
+      featuredDesc: "Agentic AI — Zerro AI, Jekyll & Hyde, Emily, Mina, Pantheon, Halal Plane",
       projectsTag: "프로젝트",
       projectsTitle: "전체 프로젝트",
       projectsDesc: "카테고리별 GitHub 리포지토리",
@@ -91,6 +92,7 @@ const I18N = {
       experienceTitle: "경력",
       certsTag: "자격증",
       certsTitle: "자격 및 인증",
+      certsDesc: "프로젝트 관리 · Agentic AI · 클라우드 (유효, 만료 제외)",
       education: "학력",
       languages: "언어",
       keyStrengths: "핵심 역량",
@@ -148,10 +150,10 @@ const I18N = {
       statCerts: "认证",
     },
     sections: {
-      aboutTag: "简介", aboutTitle: "简介", skillsTag: "技能", skillsTitle: "技能", skillsDesc: "来自 LinkedIn 个人资料",
-      featuredTag: "精选", featuredTitle: "精选项目", featuredDesc: "精选 GitHub 仓库",
+      aboutTag: "简介", aboutTitle: "简介", skillsTag: "技能", skillsTitle: "技能", skillsDesc: "已交付项目中的 Agentic AI 与实现技术",
+      featuredTag: "精选", featuredTitle: "精选项目", featuredDesc: "Agentic AI — Zerro AI、Jekyll & Hyde、Emily、Mina、Pantheon、Halal Plane",
       projectsTag: "项目", projectsTitle: "全部项目", projectsDesc: "按类别分类的 GitHub 仓库",
-      experienceTag: "经历", experienceTitle: "工作经历", certsTag: "认证", certsTitle: "证书与认证",
+      experienceTag: "经历", experienceTitle: "工作经历", certsTag: "认证", certsTitle: "证书与认证", certsDesc: "项目管理 · Agentic AI · 云（有效，不含过期）",
       education: "教育", languages: "语言", keyStrengths: "核心优势", techFocus: "AI & 技术", mission: "使命", stackDetail: "技术栈", carouselPrev: "上一个项目", carouselNext: "下一个项目",
     },
     projects: { all: "全部", github: "GitHub ↗", liveDemo: "Live Demo ↗", repoLink: "在 GitHub 查看", liveAvailable: " · Live Demo" },
@@ -198,10 +200,10 @@ const I18N = {
       statCerts: "資格",
     },
     sections: {
-      aboutTag: "概要", aboutTitle: "概要", skillsTag: "スキル", skillsTitle: "スキル", skillsDesc: "LinkedInプロフィールより",
-      featuredTag: "注目", featuredTitle: "注目プロジェクト", featuredDesc: "厳選 GitHub リポジトリ",
+      aboutTag: "概要", aboutTitle: "概要", skillsTag: "スキル", skillsTitle: "スキル", skillsDesc: "実装プロジェクトに基づく Agentic AI & 技術",
+      featuredTag: "注目", featuredTitle: "注目プロジェクト", featuredDesc: "Agentic AI — Zerro AI、Jekyll & Hyde、Emily、Mina、Pantheon、Halal Plane",
       projectsTag: "プロジェクト", projectsTitle: "全プロジェクト", projectsDesc: "カテゴリ別 GitHub リポジトリ",
-      experienceTag: "経歴", experienceTitle: "職歴", certsTag: "資格", certsTitle: "ライセンスと認定",
+      experienceTag: "経歴", experienceTitle: "職歴", certsTag: "資格", certsTitle: "ライセンスと認定", certsDesc: "プロジェクト管理 · Agentic AI · クラウド（有効、期限切れ除外）",
       education: "学歴", languages: "言語", keyStrengths: "コア強み", techFocus: "AI & 技術", mission: "ミッション", stackDetail: "技術スタック", carouselPrev: "前のプロジェクト", carouselNext: "次のプロジェクト",
     },
     projects: { all: "すべて", github: "GitHub ↗", liveDemo: "Live Demo ↗", repoLink: "GitHubで見る", liveAvailable: " · Live Demo" },
@@ -347,6 +349,123 @@ const CERTS_I18N = {
   ja: { issued: "発行", expires: "有効期限" },
 };
 
+const AI_SKILLS_I18N = {
+  ko: [
+    {
+      group: "Agentic AI & 멀티에이전트 오케스트레이션",
+      items: [
+        "Zerro AI OS — Parallel Swarm Engine, Overseer 에이전트, MCP 도구 연동",
+        "Jekyll & Hyde — 독립 belief state 듀얼 페르소나 LLM 에이전트",
+        "Agent Mina — Discord & 도구 훅 Lobster 멀티에이전트 채팅 센터",
+        "LangChain · LangGraph · MCP (Model Context Protocol)",
+      ],
+    },
+    {
+      group: "LLM, RAG & 모델 엔지니어링",
+      items: [
+        "Groq API · Gemini API · Native JSON schema tool calling",
+        "Gemma 2 2B + LoRA 파인튜닝 · self-hosted inference",
+        "Supabase pgvector RAG · 자동 압축 · 장기 메모리",
+        "ReAct agent loop · 프롬프트 엔지니어링 · 듀얼 페르소나 설계",
+      ],
+    },
+    {
+      group: "에이전트 앱 & AI 프로덕트 UI",
+      items: [
+        "Streamlit 에이전트 — Emily PM Agent, Mina automation (KO/EN)",
+        "Flutter Web — Emily's AI Pantheon (타로, 풍수, 사주)",
+        "Halal Plane PWA — Amina AI 가이드 (Groq) + GPS + Leaflet 지도",
+        "Gradio · Next.js · GitHub Actions CI/CD for AI workflows",
+      ],
+    },
+    {
+      group: "연동 & 에이전트 툴링",
+      items: [
+        "Notion API · Slack · Discord webhooks · GitHub API",
+        "Lark/Feishu Bitable · Google Sheets · BeautifulSoup 크롤러",
+        "moviepy + gTTS 콘텐츠 자동화 · DuckDuckGo 검색 도구",
+        "Trust & Safety 맥락 — 정책 기반 AI 워크플로우 설계",
+      ],
+    },
+  ],
+  zh: [
+    {
+      group: "Agentic AI 与多 Agent 编排",
+      items: [
+        "Zerro AI OS — Parallel Swarm Engine、Overseer Agent、MCP 工具集成",
+        "Jekyll & Hyde — 独立 belief state 双人格 LLM Agent",
+        "Agent Mina — Discord 与工具钩子的 Lobster 多 Agent 聊天中心",
+        "LangChain · LangGraph · MCP (Model Context Protocol)",
+      ],
+    },
+    {
+      group: "LLM、RAG 与模型工程",
+      items: [
+        "Groq API · Gemini API · Native JSON schema 工具调用",
+        "Gemma 2 2B + LoRA 微调 · 自托管推理",
+        "Supabase pgvector RAG · 自动压缩 · 长期记忆",
+        "ReAct Agent 循环 · 提示工程 · 双人格设计",
+      ],
+    },
+    {
+      group: "Agent 应用与 AI 产品 UI",
+      items: [
+        "Streamlit Agent — Emily PM Agent、Mina automation（中韩）",
+        "Flutter Web — Emily's AI Pantheon（塔罗、风水、四柱）",
+        "Halal Plane PWA — Amina AI 向导（Groq）+ GPS + Leaflet 地图",
+        "Gradio · Next.js · GitHub Actions AI 工作流 CI/CD",
+      ],
+    },
+    {
+      group: "集成与 Agent 工具",
+      items: [
+        "Notion API · Slack · Discord webhooks · GitHub API",
+        "Lark/Feishu Bitable · Google Sheets · BeautifulSoup 爬虫",
+        "moviepy + gTTS 内容自动化 · DuckDuckGo 搜索工具",
+        "Trust & Safety 语境 — 政策驱动的 AI 工作流设计",
+      ],
+    },
+  ],
+  ja: [
+    {
+      group: "Agentic AI & マルチエージェントオーケストレーション",
+      items: [
+        "Zerro AI OS — Parallel Swarm Engine、Overseer エージェント、MCP ツール連携",
+        "Jekyll & Hyde — 独立 belief state デュアルペルソナ LLM エージェント",
+        "Agent Mina — Discord & ツールフック Lobster マルチエージェントチャット",
+        "LangChain · LangGraph · MCP (Model Context Protocol)",
+      ],
+    },
+    {
+      group: "LLM、RAG & モデルエンジニアリング",
+      items: [
+        "Groq API · Gemini API · Native JSON schema ツールコーリング",
+        "Gemma 2 2B + LoRA ファインチューニング · セルフホスト推論",
+        "Supabase pgvector RAG · 自動圧縮 · 長期メモリ",
+        "ReAct エージェントループ · プロンプトエンジニアリング · デュアルペルソナ設計",
+      ],
+    },
+    {
+      group: "エージェントアプリ & AI プロダクト UI",
+      items: [
+        "Streamlit エージェント — Emily PM Agent、Mina automation（KO/EN）",
+        "Flutter Web — Emily's AI Pantheon（タロット、風水、四柱）",
+        "Halal Plane PWA — Amina AI ガイド（Groq）+ GPS + Leaflet マップ",
+        "Gradio · Next.js · GitHub Actions AI ワークフロー CI/CD",
+      ],
+    },
+    {
+      group: "連携 & エージェントツーリング",
+      items: [
+        "Notion API · Slack · Discord webhooks · GitHub API",
+        "Lark/Feishu Bitable · Google Sheets · BeautifulSoup クローラー",
+        "moviepy + gTTS コンテンツ自動化 · DuckDuckGo 検索ツール",
+        "Trust & Safety 文脈 — ポリシー駆動 AI ワークフロー設計",
+      ],
+    },
+  ],
+};
+
 function getProfile(lang) {
   const base = LINKEDIN_EN;
   if (lang === "en") return base;
@@ -359,6 +478,7 @@ function getProfile(lang) {
     aboutParagraphs: t.aboutParagraphs || base.aboutParagraphs,
     mission: t.mission || base.mission,
     keyStrengths: t.keyStrengths || base.keyStrengths,
+    aiSkills: AI_SKILLS_I18N[lang] || base.aiSkills,
     totalExperience: t.totalExperience || base.totalExperience,
     location: t.location || base.location,
     languages: t.languages || base.languages,

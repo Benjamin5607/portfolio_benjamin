@@ -30,16 +30,44 @@ const PROJECT_I18N = {
   },
   zerro_ai_landing: {
     desc: {
-      en: "ZerroAI — Tactical Swarm OS marketing landing page.",
-      ko: "ZerroAI — Tactical Swarm OS 마케팅 랜딩 페이지.",
-      zh: "ZerroAI — Tactical Swarm OS 营销着陆页。",
-      ja: "ZerroAI — Tactical Swarm OS マーケティングランディングページ。",
+      en: "Zerro AI OS — Tactical Swarm OS. Parallel Swarm Engine with Overseer agent, Supabase pgvector RAG, MCP integration, and Lark/Feishu routing.",
+      ko: "Zerro AI OS — Tactical Swarm OS. Overseer 에이전트 Parallel Swarm, Supabase pgvector RAG, MCP 연동, Lark/Feishu 라우팅.",
+      zh: "Zerro AI OS — Tactical Swarm OS。Overseer 并行 Swarm、Supabase pgvector RAG、MCP 集成、Lark/Feishu 路由。",
+      ja: "Zerro AI OS — Tactical Swarm OS。Overseer エージェント、Parallel Swarm、Supabase pgvector RAG、MCP 連携、Lark/Feishu ルーティング。",
     },
     stackDetail: {
-      en: ["HTML/CSS landing page", "Python update scripts", "Agentic AI · Swarm OS branding", "Live: zerroai.space"],
-      ko: ["HTML/CSS 랜딩", "Python 업데이트 스크립트", "Agentic AI · Swarm OS 브랜딩", "Live: zerroai.space"],
-      zh: ["HTML/CSS 着陆页", "Python 更新脚本", "Agentic AI · Swarm OS 品牌", "Live: zerroai.space"],
-      ja: ["HTML/CSS ランディング", "Python 更新スクリプト", "Agentic AI · Swarm OS", "Live: zerroai.space"],
+      en: [
+        "Parallel Swarm Engine — Promise.all concurrent sub-agents via Overseer",
+        "Supabase pgvector RAG with auto-compression before vectorization",
+        "Native JSON schema tool calling (zero markdown parsing errors)",
+        "MCP (Model Context Protocol) plug-and-play tool architecture",
+        "Hyper-Search pipeline · Lark/Feishu Bitable/Docs routing",
+        "Live: zerroai.space",
+      ],
+      ko: [
+        "Parallel Swarm Engine — Overseer가 Promise.all로 병렬 서브에이전트 배치",
+        "Supabase pgvector RAG — 벡터화 전 자동 압축·요약",
+        "Native JSON schema tool calling — 파라미터 파싱 오류 제로",
+        "MCP(Model Context Protocol) 플러그앤플레이 도구 아키텍처",
+        "Hyper-Search · Lark/Feishu Bitable/Docs 라우팅",
+        "Live: zerroai.space",
+      ],
+      zh: [
+        "Parallel Swarm Engine — Overseer 通过 Promise.all 并行子 Agent",
+        "Supabase pgvector RAG — 向量化前自动压缩",
+        "Native JSON schema 工具调用",
+        "MCP 即插即用工具架构",
+        "Hyper-Search · Lark/Feishu 路由",
+        "Live: zerroai.space",
+      ],
+      ja: [
+        "Parallel Swarm Engine — Overseer による Promise.all 並列サブエージェント",
+        "Supabase pgvector RAG — ベクトル化前の自動圧縮",
+        "Native JSON schema ツールコーリング",
+        "MCP プラグアンドプレイツールアーキテクチャ",
+        "Hyper-Search · Lark/Feishu ルーティング",
+        "Live: zerroai.space",
+      ],
     },
   },
   space_manger: {
@@ -102,18 +130,30 @@ const PROJECT_I18N = {
   },
   ai_agent_emily: {
     desc: {
-      en: "Streamlit + Groq PM agent (KO/EN). Notion tasks, PM methodologies, SNS threads.",
-      ko: "Streamlit + Groq PM 에이전트(KO/EN). Notion 태스크, PM 방법론, SNS 스레드.",
-      zh: "Streamlit + Groq PM Agent（中韩）。Notion 任务、PM 方法论、SNS 帖子。",
-      ja: "Streamlit + Groq PM エージェント（KO/EN）。Notion タスク、PM 方法論、SNS スレッド。",
+      en: "Emily PM Agent — Streamlit + Groq bilingual (KO/EN) agent for project management, Notion tasks, and SNS thread generation.",
+      ko: "Emily PM Agent — Streamlit + Groq KO/EN PM 에이전트. Notion 태스크, PM 방법론, SNS 스레드 생성.",
+      zh: "Emily PM Agent — Streamlit + Groq 双语 PM Agent。Notion 任务、PM 方法论、SNS 帖子生成。",
+      ja: "Emily PM Agent — Streamlit + Groq バイリンガル PM エージェント。Notion タスク、PM 方法論、SNS スレッド生成。",
+    },
+    stackDetail: {
+      en: ["Python · Streamlit agent UI", "Groq API · LLM inference", "Notion API — task & project sync", "KO/EN bilingual PM methodologies", "SNS thread auto-generation"],
+      ko: ["Python · Streamlit 에이전트 UI", "Groq API · LLM 추론", "Notion API — 태스크·프로젝트 동기화", "KO/EN PM 방법론", "SNS 스레드 자동 생성"],
+      zh: ["Python · Streamlit Agent UI", "Groq API", "Notion API 任务同步", "中韩双语 PM 方法论", "SNS 帖子自动生成"],
+      ja: ["Python · Streamlit エージェント UI", "Groq API", "Notion API タスク同期", "KO/EN PM 方法論", "SNS スレッド自動生成"],
     },
   },
   ai_agent_mina: {
     desc: {
-      en: "Streamlit multi-agent chat center. Groq + Gemini, Discord, Notion/GitHub/Slack/Sheets hooks.",
-      ko: "Streamlit 멀티에이전트 채팅. Groq + Gemini, Discord, Notion/GitHub/Slack/Sheets 연동.",
-      zh: "Streamlit 多 Agent 聊天中心。Groq + Gemini，Discord，Notion/GitHub/Slack/Sheets 钩子。",
-      ja: "Streamlit マルチエージェントチャット。Groq + Gemini、Discord、Notion/GitHub/Slack/Sheets 連携。",
+      en: "Lobster Chat Center — Multi-agent Streamlit hub with Groq + Gemini, Discord reporting, and Notion/GitHub/Slack/Sheets tool hooks.",
+      ko: "Lobster Chat Center — Groq + Gemini 멀티에이전트 Streamlit 허브. Discord, Notion/GitHub/Slack/Sheets 도구 연동.",
+      zh: "Lobster Chat Center — Groq + Gemini 多 Agent Streamlit 中心。Discord、Notion/GitHub/Slack/Sheets 工具钩子。",
+      ja: "Lobster Chat Center — Groq + Gemini マルチエージェント Streamlit ハブ。Discord、Notion/GitHub/Slack/Sheets 連携。",
+    },
+    stackDetail: {
+      en: ["Python · Streamlit multi-agent UI", "Groq API + Google Gemini API", "Multi-agent roster management", "Discord webhook reporting", "Tool hooks: Notion · GitHub · Slack · Google Sheets · crawler · Pixabay"],
+      ko: ["Python · Streamlit 멀티에이전트 UI", "Groq API + Google Gemini API", "멀티에이전트 로스터 관리", "Discord webhook 리포팅", "도구: Notion · GitHub · Slack · Sheets · 크롤러 · Pixabay"],
+      zh: ["Python · Streamlit 多 Agent UI", "Groq + Gemini API", "多 Agent 名册管理", "Discord webhook", "工具: Notion · GitHub · Slack · Sheets · 爬虫 · Pixabay"],
+      ja: ["Python · Streamlit マルチエージェント UI", "Groq + Gemini API", "マルチエージェントロスター", "Discord webhook", "ツール: Notion · GitHub · Slack · Sheets · クローラー · Pixabay"],
     },
   },
   ai_agent_mina_automation: {
@@ -150,10 +190,16 @@ const PROJECT_I18N = {
   },
   emily_pantheon: {
     desc: {
-      en: "Flutter Web AI Pantheon: tarot, feng shui, saju experiences.",
-      ko: "Flutter Web AI Pantheon: 타로, 풍수, 사주 체험.",
-      zh: "Flutter Web AI Pantheon：塔罗、风水、四柱体验。",
-      ja: "Flutter Web AI Pantheon：タロット、風水、四柱推命体験。",
+      en: "Emily's AI Pantheon — Flutter Web multi-experience AI agent: tarot, feng shui, and saju fortune telling.",
+      ko: "Emily's AI Pantheon — Flutter Web AI Pantheon. 타로, 풍수, 사주 운세 AI 체험.",
+      zh: "Emily's AI Pantheon — Flutter Web 多体验 AI：塔罗、风水、四柱推命。",
+      ja: "Emily's AI Pantheon — Flutter Web マルチ体験 AI：タロット、風水、四柱推命。",
+    },
+    stackDetail: {
+      en: ["Dart · Flutter Web build", "Multi-persona AI experiences (tarot, feng shui, saju)", "animate · flip cards · cached images packages", "GitHub Pages deployment · /emily_pantheon/", "Emily agent family ecosystem"],
+      ko: ["Dart · Flutter Web 빌드", "멀티 페르소나 AI 체험(타로, 풍수, 사주)", "animate · flip cards · cached images", "GitHub Pages · /emily_pantheon/", "Emily 에이전트 패밀리 생태계"],
+      zh: ["Dart · Flutter Web", "多人格 AI 体验（塔罗、风水、四柱）", "animate · flip cards · cached images", "GitHub Pages 部署", "Emily Agent 家族生态"],
+      ja: ["Dart · Flutter Web", "マルチペルソナ AI 体験（タロット、風水、四柱）", "animate · flip cards · cached images", "GitHub Pages デプロイ", "Emily エージェントファミリー"],
     },
   },
   AI_start_up_database: {
@@ -198,10 +244,16 @@ const PROJECT_I18N = {
   },
   halal_plane: {
     desc: {
-      en: "PWA for Muslim travelers: halal places, Amina AI (Groq), GPS, world map.",
-      ko: "무슬림 여행자 PWA: 할랄 장소, Amina AI(Groq), GPS, 월드맵.",
-      zh: "穆斯林旅行者 PWA：清真地点、Amina AI(Groq)、GPS、世界地图。",
-      ja: "ムスリム旅行者向け PWA：ハラールスポット、Amina AI(Groq)、GPS、ワールドマップ。",
+      en: "Halal Plane PWA — AI-powered travel companion for Muslim travelers with Amina AI (Groq), halal place finder, GPS, and world map.",
+      ko: "Halal Plane PWA — Amina AI(Groq) 기반 무슬림 여행 동반 앱. 할랄 장소 검색, GPS, 월드맵.",
+      zh: "Halal Plane PWA — Amina AI(Groq) 穆斯林旅行伴侣。清真地点、GPS、世界地图。",
+      ja: "Halal Plane PWA — Amina AI(Groq) ムスリム旅行者向けコンパニオン。ハラールスポット、GPS、ワールドマップ。",
+    },
+    stackDetail: {
+      en: ["HTML · JavaScript PWA (installable)", "Groq API — Amina AI travel guide persona", "Leaflet · GPS geolocation · world map", "Halal restaurants · cafes · mosques database", "Digital passport · offline-capable design", "Live: benjamin5607.github.io/halal_plane"],
+      ko: ["HTML · JavaScript PWA(설치 가능)", "Groq API — Amina AI 여행 가이드 페르소나", "Leaflet · GPS · 월드맵", "할랄 레스토랑 · 카페 · 모스크 DB", "디지털 여권 · offline 설계", "Live: benjamin5607.github.io/halal_plane"],
+      zh: ["HTML · JavaScript PWA", "Groq API — Amina AI 旅行向导", "Leaflet · GPS · 世界地图", "清真餐厅 · 咖啡馆 · 清真寺", "数字护照 · 离线设计", "Live: benjamin5607.github.io/halal_plane"],
+      ja: ["HTML · JavaScript PWA", "Groq API — Amina AI 旅行ガイド", "Leaflet · GPS · ワールドマップ", "ハラールレストラン · カフェ · モスク", "デジタルパスポート · オフライン対応", "Live: benjamin5607.github.io/halal_plane"],
     },
   },
   drunken_plane: {

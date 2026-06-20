@@ -8,6 +8,19 @@ const CATEGORIES = {
   tools: { label: "Developer Tools & Utilities", icon: "🛠️" },
 };
 
+const FEATURED_ORDER = [
+  "zerro_ai_landing",
+  "model_JekyllHyde",
+  "ai_agent_emily",
+  "ai_agent_mina",
+  "emily_pantheon",
+  "halal_plane",
+];
+
+function getFeaturedProjects() {
+  return FEATURED_ORDER.map((name) => PROJECTS.find((p) => p.name === name)).filter(Boolean);
+}
+
 const PROJECTS = [
   {
     name: "model_JekyllHyde",
@@ -24,14 +37,13 @@ const PROJECTS = [
     description: "AI mind consulting. Full-stack TypeScript app (Vite, React 19, Express) with Google Gemini API.",
     stack: ["TypeScript", "React 19", "Vite", "Express", "Gemini API"],
     category: "ai",
-    featured: true,
     url: `${GITHUB_BASE}/Sereme_Hypatia`,
   },
   {
     name: "zerro_ai_landing",
     title: "Zerro AI OS",
-    description: "ZerroAI — Tactical Swarm OS marketing landing page.",
-    stack: ["HTML", "Python"],
+    description: "Zerro AI OS — Tactical Swarm OS with Parallel Swarm Engine, Overseer agent, Supabase pgvector RAG, and MCP integration.",
+    stack: ["Python", "Supabase", "MCP", "LangChain", "Parallel Swarm"],
     category: "ai",
     featured: true,
     url: `${GITHUB_BASE}/zerro_ai_landing`,
@@ -43,7 +55,6 @@ const PROJECTS = [
     description: "Real-time space data games: ISS supply mission and SpaceX tycoon sim. React 18 + Vite 6 + Leaflet, wheretheiss.at API.",
     stack: ["TypeScript", "React 18", "Vite 6", "Leaflet", "ISS API"],
     category: "games",
-    featured: true,
     url: `${GITHUB_BASE}/space_manger`,
   },
   {
@@ -52,7 +63,6 @@ const PROJECTS = [
     description: "Country Janggi — 3D national-unit janggi with Hunyuan meshes and hanja piece labels. Vite, React 18, Three.js, R3F.",
     stack: ["TypeScript", "Three.js", "R3F", "Vite", "Python (assets)"],
     category: "games",
-    featured: true,
     url: `${GITHUB_BASE}/country_janggi`,
   },
   {
@@ -61,7 +71,6 @@ const PROJECTS = [
     description: "Groq-driven scripts for culture/risk data generation and HTML dashboard visualization.",
     stack: ["HTML", "Python", "Groq API"],
     category: "global",
-    featured: true,
     url: `${GITHUB_BASE}/global_culture_risk_dashboard`,
   },
   {
@@ -86,6 +95,7 @@ const PROJECTS = [
     description: "Streamlit + Groq PM agent (KO/EN). Notion tasks, PM methodologies, SNS thread generation.",
     stack: ["Python", "Streamlit", "Groq API", "Notion API"],
     category: "ai",
+    featured: true,
     url: `${GITHUB_BASE}/ai_agent_emily`,
   },
   {
@@ -94,6 +104,7 @@ const PROJECTS = [
     description: "Streamlit multi-agent chat center. Groq + Gemini, Discord reporting, Notion/GitHub/Slack/Sheets tool hooks.",
     stack: ["Python", "Streamlit", "Groq", "Gemini", "Multi-Agent"],
     category: "ai",
+    featured: true,
     url: `${GITHUB_BASE}/ai_agent_mina`,
   },
   {
@@ -134,6 +145,7 @@ const PROJECTS = [
     description: "Flutter Web AI Pantheon: tarot, feng shui, saju experiences.",
     stack: ["Dart", "Flutter Web"],
     category: "ai",
+    featured: true,
     url: `${GITHUB_BASE}/emily_pantheon`,
     external: "https://benjamin5607.github.io/emily_pantheon/",
   },
@@ -183,6 +195,7 @@ const PROJECTS = [
     description: "PWA for Muslim travelers: halal restaurants/cafes/mosques, Amina AI (Groq), GPS, world map.",
     stack: ["HTML", "JavaScript", "PWA", "Groq", "Leaflet"],
     category: "games",
+    featured: true,
     url: `${GITHUB_BASE}/halal_plane`,
     external: "https://benjamin5607.github.io/halal_plane/",
   },

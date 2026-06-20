@@ -20,7 +20,45 @@ const LINKEDIN_EN = {
     "APAC & cross-regional leadership",
     "Process optimization & risk management",
   ],
-  techFocus: ["CrewAI", "Gradio", "Streamlit", "GitHub Actions"],
+
+  aiSkills: [
+    {
+      group: "Agentic AI & Multi-Agent Orchestration",
+      items: [
+        "Zerro AI OS — Parallel Swarm Engine, Overseer agent, MCP tool integration",
+        "Jekyll & Hyde — Dual-persona LLM agents with independent belief states",
+        "Agent Mina — Lobster multi-agent chat center with Discord & tool hooks",
+        "LangChain · LangGraph · MCP (Model Context Protocol)",
+      ],
+    },
+    {
+      group: "LLM, RAG & Model Engineering",
+      items: [
+        "Groq API · Gemini API · Native JSON schema tool calling",
+        "Gemma 2 2B + LoRA fine-tuning · self-hosted inference",
+        "Supabase pgvector RAG · auto-compression · long-term memory",
+        "ReAct agent loops · prompt engineering · dual-persona design",
+      ],
+    },
+    {
+      group: "Agent Apps & AI Product UI",
+      items: [
+        "Streamlit agents — Emily PM Agent, Mina automation (KO/EN)",
+        "Flutter Web — Emily's AI Pantheon (tarot, feng shui, saju)",
+        "Halal Plane PWA — Amina AI guide (Groq) + GPS + Leaflet maps",
+        "Gradio · Next.js · GitHub Actions CI/CD for AI workflows",
+      ],
+    },
+    {
+      group: "Integrations & Agent Tooling",
+      items: [
+        "Notion API · Slack · Discord webhooks · GitHub API",
+        "Lark/Feishu Bitable · Google Sheets · BeautifulSoup crawlers",
+        "moviepy + gTTS content automation · DuckDuckGo search tools",
+        "Trust & Safety context — policy-driven AI workflow design",
+      ],
+    },
+  ],
   languages: [
     "Korean — Native or bilingual proficiency",
     "English — Full professional proficiency",
@@ -40,16 +78,16 @@ const LINKEDIN_EN = {
     },
   ],
   certifications: [
-    { name: "Getting started with Google Workspace (Google)", issuer: "Coursera", issued: "Jun 2021" },
-    { name: "Google Cloud Digital Leader Training (Google)", issuer: "Coursera", issued: "Jun 2021" },
-    { name: "Introduction to Social Media Marketing", issuer: "Coursera", issued: "Jun 2021" },
+    { name: "Agentic AI with LangChain and LangGraph", issuer: "Coursera / IBM", issued: "2025" },
+    { name: "Build AI Agents using MCP", issuer: "Coursera", issued: "2025" },
+    { name: "Advanced RAG with Vector Databases and Retrievers", issuer: "Coursera", issued: "2025" },
+    { name: "Fundamentals of Building AI Agents", issuer: "Coursera", issued: "2025" },
+    { name: "RAG and Agentic AI Capstone Project", issuer: "Coursera", issued: "2025" },
+    { name: "Vector Databases for RAG: An Introduction", issuer: "Coursera", issued: "2025" },
+    { name: "Google Project Management Professional Certificate", issuer: "Coursera / Google", issued: "Jun 2021" },
+    { name: "Google Cloud Digital Leader Training", issuer: "Coursera / Google", issued: "Jun 2021" },
     { name: "Getting Started with Azure", issuer: "Coursera", issued: "Jun 2021" },
-    { name: "Google Project Management (Google)", issuer: "Coursera", issued: "Jun 2021" },
-    { name: "Advanced Google Analytics", issuer: "Google Digital Academy (Skillshop)", issued: "Feb 2020", expires: "Feb 2023" },
-    { name: "Google Analytics for Beginners", issuer: "Google Digital Academy (Skillshop)", issued: "Feb 2020", expires: "Feb 2023" },
-    { name: "Google Tag Manager Fundamentals", issuer: "Google Digital Academy (Skillshop)", issued: "Feb 2020", expires: "Feb 2023" },
-    { name: "Google Ads Search Qualification", issuer: "Google Digital Academy (Skillshop)", issued: "Jun 2021", expires: "Jun 2022" },
-    { name: "Google Analytics Individual Qualification", issuer: "Google Digital Academy (Skillshop)", issued: "Jun 2021", expires: "Jun 2022" },
+    { name: "Getting Started with Google Workspace", issuer: "Coursera / Google", issued: "Jun 2021" },
   ],
   experience: [
     {
