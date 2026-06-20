@@ -139,7 +139,7 @@ function renderExperience() {
           showCompany && c
             ? `
         <div class="company-card">
-          <div class="company-logo-wrap">
+          <div class="company-logo-wrap"${c.logoBg ? ` style="background:${c.logoBg}"` : ""}>
             <img class="company-logo" src="${c.logo}" alt="${c.name}" loading="lazy" onerror="this.closest('.company-logo-wrap').classList.add('is-fallback');this.remove();" />
             <span class="company-logo-fallback" aria-hidden="true">${c.name.charAt(0)}</span>
           </div>

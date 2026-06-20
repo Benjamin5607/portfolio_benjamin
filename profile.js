@@ -111,7 +111,8 @@ const LINKEDIN_EN = {
       id: "webhelp",
       name: "Webhelp APAC",
       domain: "webhelp.com",
-      logo: "assets/logos/webhelp.svg",
+      logo: "assets/logos/webhelp.png",
+      logoBg: "#000000",
       industry: "CX · BPO · Outsourcing",
       summary:
         "International customer experience and BPO provider. Partnered with Google for Workspace and Google Home technical support across APAC.",
@@ -131,7 +132,8 @@ const LINKEDIN_EN = {
       id: "hwaseung",
       name: "Hwaseung R&A",
       domain: "hwaseung.co.kr",
-      logo: "assets/logos/hwaseung.svg",
+      logo: "assets/logos/hwaseung.png",
+      logoBg: "#ffffff",
       industry: "Automotive · Manufacturing",
       summary:
         "South Korean automotive parts manufacturer specializing in motor vehicle components and production line operations.",
