@@ -35,7 +35,7 @@
     <div class="hero-bg"></div>
     <div class="container hero-content">
       <p class="hero-eyebrow" data-i18n="hero.eyebrow">Partner Program Manager · ByteDance Trust & Safety</p>
-      <h1 class="hero-title">Wonbin <em>S.</em></h1>
+      <h1 class="hero-title">Wonbin <em>Shim</em></h1>
       <p class="hero-subtitle" id="heroSubtitle"></p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">View Projects</a>
@@ -91,7 +91,17 @@
           <h2 data-i18n="sections.featuredTitle">Featured Projects</h2>
           <p class="section-desc" data-i18n="sections.featuredDesc">Selected GitHub repositories</p>
         </div>
-        <div class="featured-grid" id="featuredGrid"></div>
+        <div class="featured-carousel">
+          <button type="button" class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous">←</button>
+          <div class="carousel-viewport" id="carouselViewport">
+            <div class="carousel-track" id="carouselTrack"></div>
+          </div>
+          <button type="button" class="carousel-btn carousel-next" id="carouselNext" aria-label="Next">→</button>
+          <div class="carousel-footer">
+            <span class="carousel-counter" id="carouselCounter">1 / 6</span>
+            <div class="carousel-dots" id="carouselDots"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -131,7 +141,7 @@
   <footer class="footer" id="contact">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <h2>Wonbin S.</h2>
+        <h2 id="footerName">Wonbin Shim</h2>
         <p id="footerTagline"></p>
       </div>
       <div class="footer-links">
@@ -145,6 +155,7 @@
 
   <script src="profile.js"></script>
   <script src="i18n.js"></script>
+  <script src="projects-i18n.js"></script>
   <script src="projects.js"></script>
   <script src="script.js"></script>
 </body>
