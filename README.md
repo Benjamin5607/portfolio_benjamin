@@ -21,10 +21,15 @@ npx serve .
 
 - `index.html` — Main page
 - `styles.css` — Styling
-- `profile.js` — Skills, certifications, experience data
+- `profile.js` — LinkedIn profile data (English source of truth)
+- `i18n.js` — UI translations (EN/KO/ZH/JA) and profile translations
 - `projects.js` — Project data (categories, descriptions, tech stacks, links)
-- `script.js` — Rendering & interactions
+- `script.js` — i18n, rendering & interactions
+
+## Language Support
+
+Use the **EN / KO / ZH / JA** switcher in the navigation bar. Preference is saved in `localStorage`.
 
 ## Customize
 
-Edit `profile.js` for skills/certs/experience and `projects.js` for project entries.
+Edit `profile.js` for LinkedIn profile data and `projects.js` for project entries. UI strings live in `i18n.js`.

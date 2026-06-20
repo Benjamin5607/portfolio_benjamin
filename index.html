@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Wonbin S. (Benjamin) — Partner Program Manager at ByteDance & AI Builder. Trust & Safety operations leader building agentic AI, global culture tools, and interactive simulations." />
-  <title>Wonbin S. | Portfolio</title>
+  <meta name="description" content="" id="metaDescription" />
+  <title id="pageTitle">Wonbin S. | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -14,53 +14,46 @@
   <nav class="nav" id="nav">
     <div class="nav-inner container">
       <a href="#hero" class="nav-logo">W.S.</a>
-      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#featured" data-i18n="nav.featured">Featured</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Language"></div>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <header class="hero" id="hero">
     <div class="hero-bg"></div>
     <div class="container hero-content">
-      <p class="hero-eyebrow">Partner Program Manager · AI Builder</p>
-      <h1 class="hero-title">
-        Wonbin <em>S.</em>
-      </h1>
-      <p class="hero-subtitle">
-        ByteDance/TikTok <strong>Partner Program Manager (Trust &amp; Safety)</strong> — 7개 BPO 사이트·APAC 글로벌 운영.
-        업무 외에는 <strong>Zerro AI OS</strong>(Parallel Swarm, Supabase RAG, MCP)를 직접 설계·구현하며,
-        Python/TypeScript/React/Next.js/Streamlit로 30+ public repo를 운영하는 hands-on AI 빌더.
-      </p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Partner Program Manager · ByteDance Trust & Safety</p>
+      <h1 class="hero-title">Wonbin <em>S.</em></h1>
+      <p class="hero-subtitle" id="heroSubtitle"></p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+        <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">View Projects</a>
         <a href="https://www.linkedin.com/in/wonbin-s-34191613b/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
         <a href="https://github.com/Benjamin5607" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
       </div>
-        <div class="hero-stats">
+      <div class="hero-stats">
         <div class="stat">
-          <span class="stat-value">10yr+</span>
-          <span class="stat-label">Ops · PM · T&amp;S</span>
+          <span class="stat-value" id="statExpValue"></span>
+          <span class="stat-label" data-i18n="hero.statExp">Total Experience</span>
         </div>
         <div class="stat">
-          <span class="stat-value">31</span>
-          <span class="stat-label">Public Repos</span>
+          <span class="stat-value" id="statLocationValue">KL</span>
+          <span class="stat-label" data-i18n="hero.statLocation">Location</span>
         </div>
         <div class="stat">
-          <span class="stat-value">15+</span>
-          <span class="stat-label">Certifications</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">KL</span>
-          <span class="stat-label">Kuala Lumpur, MY</span>
+          <span class="stat-value" id="statCertsValue"></span>
+          <span class="stat-label" data-i18n="hero.statCerts">Certifications</span>
         </div>
       </div>
     </div>
@@ -70,56 +63,12 @@
     <section class="section about" id="about">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">About</span>
-          <h2>운영 리더십과 AI 빌딩의 교차점</h2>
+          <span class="section-tag" data-i18n="sections.aboutTag">About</span>
+          <h2 data-i18n="sections.aboutTitle">About</h2>
         </div>
         <div class="about-grid">
-          <div class="about-text">
-            <p>
-              <strong>10년 2개월</strong>의 커리어 — Accenture(한국 시장 웹/SNS 운영) → Webhelp APAC(Ops Team Lead) →
-              ByteDance/TikTok(Partner Operations Manager → Partner Program Manager, Trust &amp; Safety).
-              Hwaseung R&amp;A(미국 Alabama) Assistant Production Manager에서 MES 개발·생산관리로 시작해,
-              대규모 BPO·콘텐츠 모더레이션·파트너 프로그램 거버넌스까지 확장했습니다.
-            </p>
-            <p>
-              현재 TikTok T&amp;S에서 <strong>7개 BPO 사이트</strong> 운영 표준화, 위기 대응(Crisis Management),
-              웰니스 프로그램, POM 역량 매칭, WBR/MBR 통합 등 APAC·글로벌 파트너 프로그램을 총괄합니다.
-              Six Sigma·품질관리 교육 배경(경북대 Automotive Engineering)이 운영 데이터 분석과 KPI 최적화에 연결됩니다.
-            </p>
-            <p>
-              업무 외 빌드 영역: <strong>Zerro AI OS</strong>(Overseer Swarm, pgvector RAG, MCP, Lark 연동),
-              <strong>Emily</strong> 제품군(traveleditor, halal_plane, PM Agent, Pantheon),
-              Groq/Gemini/Streamlit 에이전트 10+, 글로벌 슬랭·문화 리스크 DB,
-              Three.js 3D 장기·한국전쟁 시뮬·ISS 우주 게임, AI Teacher Assistant(OCR/PDF/YouTube) 등
-              <strong>31개 public repo</strong>를 직접 유지합니다.
-            </p>
-          </div>
-          <div class="about-cards">
-            <div class="about-card">
-              <h3>Professional Identity</h3>
-              <ul>
-                <li>Trust &amp; Safety · Content Moderation Ops</li>
-                <li>Partner Program &amp; BPO Vendor Governance</li>
-                <li>Agentic AI Architect (Zerro AI OS)</li>
-                <li>Global Culture · Risk · Slang Research</li>
-                <li>Full-Stack Builder (Python · TS · React)</li>
-              </ul>
-            </div>
-            <div class="about-card">
-              <h3>Languages</h3>
-              <ul>
-                <li>한국어 — Native or Bilingual</li>
-                <li>English — Full Professional Proficiency</li>
-              </ul>
-            </div>
-            <div class="about-card">
-              <h3>Education</h3>
-              <p><strong>경북대학교</strong> — Bachelor's, Automotive Engineering Technology (2007–2015)</p>
-              <p class="muted">Six Sigma, FMEA, DOE, Quality Management 전공 과정</p>
-              <p class="muted"><strong>University of the Visayas</strong> — English Language Course (2012, Cebu)</p>
-              <p class="muted"><strong>Hwaseung R&amp;A</strong> — MES 개발·생산관리 (Enterprise, AL, USA)</p>
-            </div>
-          </div>
+          <div class="about-text" id="aboutText"></div>
+          <div class="about-cards" id="aboutCards"></div>
         </div>
       </div>
     </section>
@@ -127,9 +76,9 @@
     <section class="section skills" id="skills">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Skills</span>
-          <h2>기술 &amp; 역량</h2>
-          <p class="section-desc">운영 리더십 + AI 엔지니어링 + 풀스택 빌딩</p>
+          <span class="section-tag" data-i18n="sections.skillsTag">Skills</span>
+          <h2 data-i18n="sections.skillsTitle">Skills</h2>
+          <p class="section-desc" data-i18n="sections.skillsDesc">From LinkedIn profile</p>
         </div>
         <div class="skills-grid" id="skillsGrid"></div>
       </div>
@@ -138,9 +87,9 @@
     <section class="section featured" id="featured">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Featured</span>
-          <h2>대표 프로젝트</h2>
-          <p class="section-desc">가장 Wonbin을 잘 보여주는 6개의 프로젝트</p>
+          <span class="section-tag" data-i18n="sections.featuredTag">Featured</span>
+          <h2 data-i18n="sections.featuredTitle">Featured Projects</h2>
+          <p class="section-desc" data-i18n="sections.featuredDesc">Selected GitHub repositories</p>
         </div>
         <div class="featured-grid" id="featuredGrid"></div>
       </div>
@@ -149,9 +98,9 @@
     <section class="section projects" id="projects">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Projects</span>
-          <h2>전체 프로젝트</h2>
-          <p class="section-desc">카테고리별 GitHub 리포지토리</p>
+          <span class="section-tag" data-i18n="sections.projectsTag">Projects</span>
+          <h2 data-i18n="sections.projectsTitle">All Projects</h2>
+          <p class="section-desc" data-i18n="sections.projectsDesc">GitHub repositories by category</p>
         </div>
         <div class="filter-bar" id="filterBar"></div>
         <div class="projects-grid" id="projectsGrid"></div>
@@ -161,8 +110,8 @@
     <section class="section experience" id="experience">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Experience</span>
-          <h2>경력</h2>
+          <span class="section-tag" data-i18n="sections.experienceTag">Experience</span>
+          <h2 data-i18n="sections.experienceTitle">Experience</h2>
         </div>
         <div class="timeline" id="experienceTimeline"></div>
       </div>
@@ -171,8 +120,8 @@
     <section class="section certs">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Certifications</span>
-          <h2>자격 &amp; 학습</h2>
+          <span class="section-tag" data-i18n="sections.certsTag">Certifications</span>
+          <h2 data-i18n="sections.certsTitle">Licenses & Certifications</h2>
         </div>
         <div class="cert-grid" id="certGrid"></div>
       </div>
@@ -183,18 +132,19 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <h2>Wonbin S.</h2>
-        <p>Building at the intersection of Trust &amp; Safety and Agentic AI.</p>
+        <p id="footerTagline"></p>
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/wonbin-s-34191613b/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/Benjamin5607" target="_blank" rel="noopener">GitHub</a>
         <a href="https://zerroai.space" target="_blank" rel="noopener">Zerro AI</a>
       </div>
-      <p class="footer-copy">&copy; 2026 Wonbin S. All rights reserved.</p>
+      <p class="footer-copy" data-i18n="footer.copy">&copy; 2026 Wonbin S. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="profile.js"></script>
+  <script src="i18n.js"></script>
   <script src="projects.js"></script>
   <script src="script.js"></script>
 </body>
