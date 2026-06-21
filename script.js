@@ -20,15 +20,33 @@ function applyStaticI18n() {
 }
 
 function renderLangSwitcher() {
-  const switcher = document.getElementById("langSwitcher");
-  switcher.innerHTML = SUPPORTED_LANGS.map(
+  const html = SUPPORTED_LANGS.map(
     (lang) =>
       `<button type="button" class="lang-btn${lang === currentLang ? " active" : ""}" data-lang="${lang}" aria-pressed="${lang === currentLang}">${LANG_LABELS[lang]}</button>`
   ).join("");
 
-  switcher.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+  ["langSwitcher", "langSwitcherMenu"].forEach((id) => {
+    const switcher = document.getElementById(id);
+    if (!switcher) return;
+    switcher.innerHTML = html;
+    switcher.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
   });
+}
+
+function buildProjectCard(p, pLabels) {
+  return `
+    <article class="project-card" data-category="${p.category}">
+      <div class="card-header"><h3>${p.title}</h3><span class="card-icon">${CATEGORIES[p.category].icon}</span></div>
+      <p class="repo-name">${p.name}</p>
+      <p>${getProjectDesc(p.name, currentLang)}</p>
+      <div class="stack-tags">${createStackTags(p.stack)}</div>
+      <div class="card-links">
+        <a href="${p.url}" target="_blank" rel="noopener">${pLabels.github}</a>
+        ${p.external ? `<a href="${p.external}" target="_blank" rel="noopener">${pLabels.liveDemo}</a>` : ""}
+      </div>
+    </article>`;
 }
 
 function setLanguage(lang) {
@@ -204,6 +222,10 @@ function renderFeatured() {
   const pLabels = I18N[currentLang]?.projects || I18N.en.projects;
   const s = I18N[currentLang]?.sections || I18N.en.sections;
 
+  document.getElementById("featuredMobileGrid").innerHTML = featured
+    .map((p) => buildProjectCard(p, pLabels))
+    .join("");
+
   if (carouselIndex >= featured.length) carouselIndex = 0;
   if (carouselIndex < 0) carouselIndex = featured.length - 1;
 
@@ -278,17 +300,7 @@ function renderFilters() {
 function renderProjects() {
   const pLabels = I18N[currentLang]?.projects || I18N.en.projects;
   document.getElementById("projectsGrid").innerHTML = PROJECTS.map(
-    (p) => `
-    <article class="project-card" data-category="${p.category}">
-      <div class="card-header"><h3>${p.title}</h3><span class="card-icon">${CATEGORIES[p.category].icon}</span></div>
-      <p class="repo-name">${p.name}</p>
-      <p>${getProjectDesc(p.name, currentLang)}</p>
-      <div class="stack-tags">${createStackTags(p.stack)}</div>
-      <div class="card-links">
-        <a href="${p.url}" target="_blank" rel="noopener">${pLabels.github}</a>
-        ${p.external ? `<a href="${p.external}" target="_blank" rel="noopener">${pLabels.liveDemo}</a>` : ""}
-      </div>
-    </article>`
+    (p) => buildProjectCard(p, pLabels)
   ).join("");
 }
 
@@ -307,6 +319,7 @@ function initNav() {
   toggle.addEventListener("click", () => setMenuOpen(!links.classList.contains("open")));
   backdrop?.addEventListener("click", () => setMenuOpen(false));
   links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenuOpen(false)));
+  document.getElementById("langSwitcherMenu")?.addEventListener("click", () => setMenuOpen(false));
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") setMenuOpen(false);
   });

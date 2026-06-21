@@ -9,7 +9,7 @@ const I18N = {
       description:
         "Wonbin Shim — Partner Program Manager @ ByteDance | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
     },
-    nav: { about: "About", skills: "Skills", featured: "Featured", projects: "Projects", experience: "Experience", contact: "Contact", menu: "Open menu" },
+    nav: { about: "About", skills: "Skills", featured: "Featured", projects: "Projects", experience: "Experience", contact: "Contact", menu: "Open menu", language: "Language" },
     hero: {
       eyebrow: "Partner Program Manager · ByteDance Trust & Safety",
       ctaProjects: "View Projects",
@@ -68,7 +68,7 @@ const I18N = {
       description:
         "Wonbin Shim — ByteDance Partner Program Manager | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
     },
-    nav: { about: "소개", skills: "역량", featured: "대표", projects: "프로젝트", experience: "경력", contact: "연락", menu: "메뉴 열기" },
+    nav: { about: "소개", skills: "역량", featured: "대표", projects: "프로젝트", experience: "경력", contact: "연락", menu: "메뉴 열기", language: "언어" },
     hero: {
       eyebrow: "Partner Program Manager · ByteDance Trust & Safety",
       ctaProjects: "프로젝트 보기",
@@ -141,7 +141,7 @@ const I18N = {
       description:
         "Wonbin Shim — ByteDance Partner Program Manager | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
     },
-    nav: { about: "简介", skills: "技能", featured: "精选", projects: "项目", experience: "经历", contact: "联系", menu: "打开菜单" },
+    nav: { about: "简介", skills: "技能", featured: "精选", projects: "项目", experience: "经历", contact: "联系", menu: "打开菜单", language: "语言" },
     hero: {
       eyebrow: "Partner Program Manager · ByteDance Trust & Safety",
       ctaProjects: "查看项目",
@@ -191,7 +191,7 @@ const I18N = {
       description:
         "Wonbin Shim — ByteDance Partner Program Manager | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
     },
-    nav: { about: "概要", skills: "スキル", featured: "注目", projects: "プロジェクト", experience: "経歴", contact: "連絡", menu: "メニューを開く" },
+    nav: { about: "概要", skills: "スキル", featured: "注目", projects: "プロジェクト", experience: "経歴", contact: "連絡", menu: "メニューを開く", language: "言語" },
     hero: {
       eyebrow: "Partner Program Manager · ByteDance Trust & Safety",
       ctaProjects: "プロジェクトを見る",
