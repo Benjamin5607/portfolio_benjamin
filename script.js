@@ -295,11 +295,29 @@ function renderProjects() {
 function initNav() {
   const toggle = document.getElementById("navToggle");
   const links = document.getElementById("navLinks");
-  toggle.addEventListener("click", () => links.classList.toggle("open"));
-  links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => links.classList.remove("open")));
+  const backdrop = document.getElementById("navBackdrop");
+
+  const setMenuOpen = (open) => {
+    links.classList.toggle("open", open);
+    backdrop?.classList.toggle("visible", open);
+    document.body.classList.toggle("nav-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
+  toggle.addEventListener("click", () => setMenuOpen(!links.classList.contains("open")));
+  backdrop?.addEventListener("click", () => setMenuOpen(false));
+  links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenuOpen(false)));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setMenuOpen(false);
+  });
+
   window.addEventListener("scroll", () => {
     document.getElementById("nav").style.borderBottomColor =
       window.scrollY > 50 ? "rgba(255,255,255,0.08)" : "transparent";
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) setMenuOpen(false);
   });
 }
 
