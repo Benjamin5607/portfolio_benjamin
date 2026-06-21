@@ -25,7 +25,7 @@ function renderLangSwitcher() {
       `<button type="button" class="lang-btn${lang === currentLang ? " active" : ""}" data-lang="${lang}" aria-pressed="${lang === currentLang}">${LANG_LABELS[lang]}</button>`
   ).join("");
 
-  ["langSwitcher", "langSwitcherMenu"].forEach((id) => {
+  ["langSwitcher", "langSwitcherMobile"].forEach((id) => {
     const switcher = document.getElementById(id);
     if (!switcher) return;
     switcher.innerHTML = html;
@@ -319,7 +319,6 @@ function initNav() {
   toggle.addEventListener("click", () => setMenuOpen(!links.classList.contains("open")));
   backdrop?.addEventListener("click", () => setMenuOpen(false));
   links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenuOpen(false)));
-  document.getElementById("langSwitcherMenu")?.addEventListener("click", () => setMenuOpen(false));
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") setMenuOpen(false);
   });

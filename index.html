@@ -9,13 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
   <nav class="nav" id="nav">
     <div class="nav-inner container">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <a href="#hero" class="nav-logo">W.S.</a>
+      <div class="lang-switcher lang-switcher--mobile" id="langSwitcherMobile" role="group" aria-label="Language"></div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
@@ -23,17 +27,8 @@
         <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-        <li class="nav-lang-panel">
-          <span class="nav-lang-label" data-i18n="nav.language">Language</span>
-          <div class="lang-switcher lang-switcher--menu" id="langSwitcherMenu" role="group" aria-label="Language"></div>
-        </li>
       </ul>
-      <div class="nav-actions">
-        <div class="lang-switcher lang-switcher--bar" id="langSwitcher" role="group" aria-label="Language"></div>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <div class="lang-switcher lang-switcher--desktop" id="langSwitcher" role="group" aria-label="Language"></div>
     </div>
   </nav>
 
