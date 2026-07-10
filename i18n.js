@@ -9,10 +9,10 @@ const I18N = {
       description:
         "Wonbin Shim — Partner Program Manager @ ByteDance | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
     },
-    nav: { about: "About", skills: "Skills", featured: "Featured", projects: "Projects", experience: "Experience", contact: "Contact", menu: "Open menu", language: "Language" },
+    nav: { about: "About", skills: "Skills", featured: "Featured", lab: "Eccentric Lab", experience: "Experience", contact: "Contact", menu: "Open menu", language: "Language" },
     hero: {
       eyebrow: "Partner Program Manager · ByteDance Trust & Safety",
-      ctaProjects: "View Projects",
+      ctaProjects: "View Eccentric Lab",
       statExp: "Total Experience",
       statLocation: "Location",
       statCerts: "Certifications",
@@ -25,7 +25,11 @@ const I18N = {
       skillsDesc: "Agentic AI & technologies implemented across shipped projects",
       featuredTag: "Featured",
       featuredTitle: "Featured Projects",
-      featuredDesc: "Agentic AI — Zerro AI, Jekyll & Hyde, Emily, Mina, Pantheon, Halal Plane",
+      featuredDesc: "Production · Viral · Research — Zerro AI, Country Janggi, Jekyll & Hyde, Pantheon, Risk Radar, Emily",
+      labTag: "Eccentric Lab",
+      labTitle: "Eccentric Lab",
+      labDesc: "My biggest asset isn't code — it's the Eccentric Lab brand. GitHub repos grouped into three labs: Production (shipped products), Viral (culture & experiences), Research (experimental AI).",
+      labFlagship: "Flagship",
       projectsTag: "Projects",
       projectsTitle: "All Projects",
       projectsDesc: "GitHub repositories by category",
@@ -54,12 +58,19 @@ const I18N = {
       tagline: "Partner Program Manager @ ByteDance | Trust & Safety",
       copy: "© 2026 Wonbin Shim. All rights reserved.",
     },
-    categories: {
-      ai: "AI & Agentic Systems",
-      global: "Global Culture & Risk",
-      games: "Games & Simulations",
-      edtech: "Education & Social Impact",
-      tools: "Developer Tools & Utilities",
+    labs: {
+      production: {
+        name: "Production Lab",
+        tagline: "Shipped agent platforms, OS layers, and production-grade tools",
+      },
+      viral: {
+        name: "Viral Lab",
+        tagline: "Culture, games, tarot, travel — eccentric experiences built to spread",
+      },
+      research: {
+        name: "Research Lab",
+        tagline: "Experimental LLM systems, dual-persona agents, and R&D prototypes",
+      },
     },
   },
   ko: {
@@ -68,10 +79,10 @@ const I18N = {
       description:
         "Wonbin Shim — ByteDance Partner Program Manager | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
     },
-    nav: { about: "소개", skills: "역량", featured: "대표", projects: "프로젝트", experience: "경력", contact: "연락", menu: "메뉴 열기", language: "언어" },
+    nav: { about: "소개", skills: "역량", featured: "대표", lab: "Eccentric Lab", experience: "경력", contact: "연락", menu: "메뉴 열기", language: "언어" },
     hero: {
       eyebrow: "Partner Program Manager · ByteDance Trust & Safety",
-      ctaProjects: "프로젝트 보기",
+      ctaProjects: "Eccentric Lab 보기",
       statExp: "총 경력",
       statLocation: "위치",
       statCerts: "자격증",
@@ -84,7 +95,11 @@ const I18N = {
       skillsDesc: "실제 프로젝트에서 구현한 Agentic AI & 기술",
       featuredTag: "대표",
       featuredTitle: "대표 프로젝트",
-      featuredDesc: "Agentic AI — Zerro AI, Jekyll & Hyde, Emily, Mina, Pantheon, Halal Plane",
+      featuredDesc: "Production · Viral · Research — Zerro AI, Country Janggi, Jekyll & Hyde, Pantheon, Risk Radar, Emily",
+      labTag: "Eccentric Lab",
+      labTitle: "Eccentric Lab",
+      labDesc: "가장 큰 자산은 코드가 아니라 Eccentric Lab 브랜드입니다. GitHub 프로젝트를 Production(출시 제품), Viral(문화·경험), Research(실험 AI) 세 랩으로 정리했습니다.",
+      labFlagship: "대표작",
       projectsTag: "프로젝트",
       projectsTitle: "전체 프로젝트",
       projectsDesc: "카테고리별 GitHub 리포지토리",
@@ -104,12 +119,10 @@ const I18N = {
     },
     projects: { all: "전체", github: "GitHub ↗", liveDemo: "Live Demo ↗", repoLink: "GitHub에서 보기", liveAvailable: " · Live Demo" },
     footer: { tagline: "ByteDance Partner Program Manager | Trust & Safety", copy: "© 2026 Wonbin Shim. All rights reserved." },
-    categories: {
-      ai: "AI & 에이전틱 시스템",
-      global: "글로벌 문화 & 리스크",
-      games: "게임 & 시뮬레이션",
-      edtech: "교육 & 사회적 영향",
-      tools: "개발 도구 & 유틸리티",
+    labs: {
+      production: { name: "Production Lab", tagline: "출시된 에이전트 플랫폼, OS, 프로덕션 도구" },
+      viral: { name: "Viral Lab", tagline: "문화, 게임, 타로, 여행 — 퍼지도록 만든 기발한 경험" },
+      research: { name: "Research Lab", tagline: "실험적 LLM, 듀얼 페르소나, R&D 프로토타입" },
     },
     profile: {
       aboutParagraphs: [
@@ -141,25 +154,29 @@ const I18N = {
       description:
         "Wonbin Shim — ByteDance Partner Program Manager | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
     },
-    nav: { about: "简介", skills: "技能", featured: "精选", projects: "项目", experience: "经历", contact: "联系", menu: "打开菜单", language: "语言" },
+    nav: { about: "简介", skills: "技能", featured: "精选", lab: "Eccentric Lab", experience: "经历", contact: "联系", menu: "打开菜单", language: "语言" },
     hero: {
       eyebrow: "Partner Program Manager · ByteDance Trust & Safety",
-      ctaProjects: "查看项目",
+      ctaProjects: "查看 Eccentric Lab",
       statExp: "总经验",
       statLocation: "地点",
       statCerts: "认证",
     },
     sections: {
       aboutTag: "简介", aboutTitle: "简介", skillsTag: "技能", skillsTitle: "技能", skillsDesc: "已交付项目中的 Agentic AI 与实现技术",
-      featuredTag: "精选", featuredTitle: "精选项目", featuredDesc: "Agentic AI — Zerro AI、Jekyll & Hyde、Emily、Mina、Pantheon、Halal Plane",
+      featuredTag: "精选", featuredTitle: "精选项目", featuredDesc: "Production · Viral · Research — Zerro AI、Country Janggi、Jekyll & Hyde、Pantheon、Risk Radar、Emily",
+      labTag: "Eccentric Lab", labTitle: "Eccentric Lab", labDesc: "最大的资产不是代码，而是 Eccentric Lab 品牌。GitHub 项目分为 Production（已发布产品）、Viral（文化与体验）、Research（实验 AI）三个实验室。",
+      labFlagship: "代表作",
       projectsTag: "项目", projectsTitle: "全部项目", projectsDesc: "按类别分类的 GitHub 仓库",
       experienceTag: "经历", experienceTitle: "工作经历", certsTag: "认证", certsTitle: "证书与认证", certsDesc: "项目管理 · Agentic AI · 云（有效，不含过期）",
       education: "教育", languages: "语言", keyStrengths: "核心优势", techFocus: "AI & 技术", mission: "使命", stackDetail: "技术栈", carouselPrev: "上一个项目", carouselNext: "下一个项目",
     },
     projects: { all: "全部", github: "GitHub ↗", liveDemo: "Live Demo ↗", repoLink: "在 GitHub 查看", liveAvailable: " · Live Demo" },
     footer: { tagline: "ByteDance Partner Program Manager | Trust & Safety", copy: "© 2026 Wonbin Shim. All rights reserved." },
-    categories: {
-      ai: "AI 与智能体系统", global: "全球文化与风险", games: "游戏与模拟", edtech: "教育与社会影响", tools: "开发工具与实用程序",
+    labs: {
+      production: { name: "Production Lab", tagline: "已发布的智能体平台、OS 层与生产级工具" },
+      viral: { name: "Viral Lab", tagline: "文化、游戏、塔罗、旅行 — 为传播而设计的奇特体验" },
+      research: { name: "Research Lab", tagline: "实验性 LLM、双人格智能体与研发原型" },
     },
     profile: {
       aboutParagraphs: [
@@ -191,25 +208,29 @@ const I18N = {
       description:
         "Wonbin Shim — ByteDance Partner Program Manager | Trust & Safety · Partner Programs · Platform/Search/AI-Data Support (APAC & Global)",
     },
-    nav: { about: "概要", skills: "スキル", featured: "注目", projects: "プロジェクト", experience: "経歴", contact: "連絡", menu: "メニューを開く", language: "言語" },
+    nav: { about: "概要", skills: "スキル", featured: "注目", lab: "Eccentric Lab", experience: "経歴", contact: "連絡", menu: "メニューを開く", language: "言語" },
     hero: {
       eyebrow: "Partner Program Manager · ByteDance Trust & Safety",
-      ctaProjects: "プロジェクトを見る",
+      ctaProjects: "Eccentric Lab を見る",
       statExp: "総経験",
       statLocation: "所在地",
       statCerts: "資格",
     },
     sections: {
       aboutTag: "概要", aboutTitle: "概要", skillsTag: "スキル", skillsTitle: "スキル", skillsDesc: "実装プロジェクトに基づく Agentic AI & 技術",
-      featuredTag: "注目", featuredTitle: "注目プロジェクト", featuredDesc: "Agentic AI — Zerro AI、Jekyll & Hyde、Emily、Mina、Pantheon、Halal Plane",
+      featuredTag: "注目", featuredTitle: "注目プロジェクト", featuredDesc: "Production · Viral · Research — Zerro AI、Country Janggi、Jekyll & Hyde、Pantheon、Risk Radar、Emily",
+      labTag: "Eccentric Lab", labTitle: "Eccentric Lab", labDesc: "最大の資産はコードではなく Eccentric Lab ブランド。GitHub プロジェクトを Production（製品）、Viral（文化・体験）、Research（実験 AI）の3ラボに整理。",
+      labFlagship: "代表作",
       projectsTag: "プロジェクト", projectsTitle: "全プロジェクト", projectsDesc: "カテゴリ別 GitHub リポジトリ",
       experienceTag: "経歴", experienceTitle: "職歴", certsTag: "資格", certsTitle: "ライセンスと認定", certsDesc: "プロジェクト管理 · Agentic AI · クラウド（有効、期限切れ除外）",
       education: "学歴", languages: "言語", keyStrengths: "コア強み", techFocus: "AI & 技術", mission: "ミッション", stackDetail: "技術スタック", carouselPrev: "前のプロジェクト", carouselNext: "次のプロジェクト",
     },
     projects: { all: "すべて", github: "GitHub ↗", liveDemo: "Live Demo ↗", repoLink: "GitHubで見る", liveAvailable: " · Live Demo" },
     footer: { tagline: "ByteDance Partner Program Manager | Trust & Safety", copy: "© 2026 Wonbin Shim. All rights reserved." },
-    categories: {
-      ai: "AI & エージェントシステム", global: "グローバル文化 & リスク", games: "ゲーム & シミュレーション", edtech: "教育 & 社会貢献", tools: "開発ツール & ユーティリティ",
+    labs: {
+      production: { name: "Production Lab", tagline: "出荷済みエージェントプラットフォーム、OS、本番ツール" },
+      viral: { name: "Viral Lab", tagline: "文化、ゲーム、タロット、旅行 — 拡散を狙ったエキセントリックな体験" },
+      research: { name: "Research Lab", tagline: "実験的 LLM、デュアルペルソナ、R&D プロトタイプ" },
     },
     profile: {
       aboutParagraphs: [
@@ -587,6 +608,14 @@ function t(key, lang) {
   return val ?? key;
 }
 
+function getLabLabel(key, lang) {
+  return I18N[lang]?.labs?.[key]?.name || I18N.en.labs[key]?.name || key;
+}
+
+function getLabTagline(key, lang) {
+  return I18N[lang]?.labs?.[key]?.tagline || I18N.en.labs[key]?.tagline || "";
+}
+
 function getCategoryLabel(key, lang) {
-  return I18N[lang]?.categories?.[key] || I18N.en.categories[key] || key;
+  return getLabLabel(key, lang);
 }

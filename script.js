@@ -36,9 +36,14 @@ function renderLangSwitcher() {
 }
 
 function buildProjectCard(p, pLabels) {
+  const lab = LABS[p.lab];
   return `
-    <article class="project-card" data-category="${p.category}">
-      <div class="card-header"><h3>${p.title}</h3><span class="card-icon">${CATEGORIES[p.category].icon}</span></div>
+    <article class="project-card" data-lab="${p.lab}">
+      <div class="card-header">
+        <h3>${p.title}</h3>
+        <span class="card-icon" title="${getLabLabel(p.lab, currentLang)}">${lab?.icon || "📦"}</span>
+      </div>
+      <span class="card-lab">${getLabLabel(p.lab, currentLang)}</span>
       <p class="repo-name">${p.name}</p>
       <p>${getProjectDesc(p.name, currentLang)}</p>
       <div class="stack-tags">${createStackTags(p.stack)}</div>
@@ -67,7 +72,7 @@ function renderHero() {
 
   const heroLinks = LINKEDIN_EN.websiteLinks.filter((link) => link.hero);
   document.getElementById("heroLinks").innerHTML = `
-    <a href="#projects" class="btn btn-primary">${t("hero.ctaProjects", currentLang)}</a>
+    <a href="#eccentric-lab" class="btn btn-primary">${t("hero.ctaProjects", currentLang)}</a>
     ${heroLinks
       .map(
         (link) =>
@@ -200,7 +205,7 @@ function buildFeaturedSlide(p, pLabels, s) {
   return `
     <article class="carousel-slide">
       <div class="featured-card-large">
-        <span class="card-category">${CATEGORIES[p.category].icon} ${getCategoryLabel(p.category, currentLang)}</span>
+        <span class="card-category">${LABS[p.lab].icon} ${getLabLabel(p.lab, currentLang)}</span>
         <h3>${p.title}</h3>
         <p class="repo-name">${p.name}</p>
         <p class="featured-desc">${desc}</p>
@@ -275,14 +280,13 @@ function initCarousel() {
 
 function renderFilters() {
   const bar = document.getElementById("filterBar");
-  const cats = Object.keys(CATEGORIES);
   const pLabels = I18N[currentLang]?.projects || I18N.en.projects;
 
   bar.innerHTML = `
     <button class="filter-btn active" data-filter="all">${pLabels.all} (${PROJECTS.length})</button>
-    ${cats.map((key) => {
-      const count = PROJECTS.filter((p) => p.category === key).length;
-      return `<button class="filter-btn" data-filter="${key}">${CATEGORIES[key].icon} ${getCategoryLabel(key, currentLang)} (${count})</button>`;
+    ${LAB_ORDER.map((key) => {
+      const count = getLabProjects(key).length;
+      return `<button class="filter-btn" data-filter="${key}">${LABS[key].icon} ${getLabLabel(key, currentLang)} (${count})</button>`;
     }).join("")}`;
 
   bar.onclick = (e) => {
@@ -291,17 +295,35 @@ function renderFilters() {
     bar.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     const filter = btn.dataset.filter;
-    document.querySelectorAll(".project-card").forEach((card) => {
-      card.classList.toggle("hidden", filter !== "all" && card.dataset.category !== filter);
+    document.querySelectorAll(".lab-block").forEach((block) => {
+      block.classList.toggle("hidden", filter !== "all" && block.dataset.lab !== filter);
     });
   };
 }
 
-function renderProjects() {
+function renderEccentricLab() {
   const pLabels = I18N[currentLang]?.projects || I18N.en.projects;
-  document.getElementById("projectsGrid").innerHTML = PROJECTS.map(
-    (p) => buildProjectCard(p, pLabels)
-  ).join("");
+  const s = I18N[currentLang]?.sections || I18N.en.sections;
+
+  document.getElementById("labSections").innerHTML = LAB_ORDER.map((labKey) => {
+    const flagship = getFlagshipProject(labKey);
+    const projects = getLabProjects(labKey);
+
+    return `
+    <article class="lab-block" data-lab="${labKey}" id="lab-${labKey}">
+      <header class="lab-header">
+        <span class="lab-icon" aria-hidden="true">${LABS[labKey].icon}</span>
+        <div class="lab-header-text">
+          <h3>${getLabLabel(labKey, currentLang)}</h3>
+          <p class="lab-tagline">${getLabTagline(labKey, currentLang)}</p>
+          <p class="lab-flagship">${s.labFlagship}: <strong>${flagship?.title || LABS[labKey].flagshipTitle}</strong></p>
+        </div>
+      </header>
+      <div class="projects-grid">
+        ${projects.map((p) => buildProjectCard(p, pLabels)).join("")}
+      </div>
+    </article>`;
+  }).join("");
 }
 
 function initNav() {
@@ -344,7 +366,7 @@ function renderAll() {
   renderContactLinks();
   renderFeatured();
   renderFilters();
-  renderProjects();
+  renderEccentricLab();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -24,7 +24,7 @@
         <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
         <li><a href="#featured" data-i18n="nav.featured">Featured</a></li>
-        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#eccentric-lab" data-i18n="nav.lab">Eccentric Lab</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
@@ -39,7 +39,7 @@
       <h1 class="hero-title">Wonbin <em>Shim</em></h1>
       <p class="hero-subtitle" id="heroSubtitle"></p>
       <div class="hero-actions" id="heroLinks">
-        <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">View Projects</a>
+        <a href="#eccentric-lab" class="btn btn-primary" data-i18n="hero.ctaProjects">View Eccentric Lab</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -107,15 +107,15 @@
       </div>
     </section>
 
-    <section class="section projects" id="projects">
+    <section class="section eccentric-lab" id="eccentric-lab">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="sections.projectsTag">Projects</span>
-          <h2 data-i18n="sections.projectsTitle">All Projects</h2>
-          <p class="section-desc" data-i18n="sections.projectsDesc">GitHub repositories by category</p>
+        <div class="section-header eccentric-lab-intro">
+          <span class="section-tag" data-i18n="sections.labTag">Eccentric Lab</span>
+          <h2 data-i18n="sections.labTitle">Eccentric Lab</h2>
+          <p class="section-desc" data-i18n="sections.labDesc">My biggest asset isn't code — it's the Eccentric Lab brand.</p>
         </div>
         <div class="filter-bar" id="filterBar"></div>
-        <div class="projects-grid" id="projectsGrid"></div>
+        <div class="lab-sections" id="labSections"></div>
       </div>
     </section>
 

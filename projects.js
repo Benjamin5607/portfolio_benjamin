@@ -1,24 +1,45 @@
 const GITHUB_BASE = "https://github.com/Benjamin5607";
 
-const CATEGORIES = {
-  ai: { label: "AI & Agentic Systems", icon: "🧠" },
-  global: { label: "Global Culture & Risk", icon: "🌍" },
-  games: { label: "Games & Simulations", icon: "🎮" },
-  edtech: { label: "Education & Social Impact", icon: "📚" },
-  tools: { label: "Developer Tools & Utilities", icon: "🛠️" },
+const LABS = {
+  production: {
+    icon: "⚙️",
+    flagship: "zerro_ai_landing",
+    flagshipTitle: "Zerro AI OS",
+  },
+  viral: {
+    icon: "✨",
+    flagship: "country_janggi",
+    flagshipTitle: "Country Janggi",
+  },
+  research: {
+    icon: "🔬",
+    flagship: "model_JekyllHyde",
+    flagshipTitle: "Jekyll & Hyde",
+  },
 };
+
+const LAB_ORDER = ["production", "viral", "research"];
 
 const FEATURED_ORDER = [
   "zerro_ai_landing",
+  "country_janggi",
   "model_JekyllHyde",
-  "ai_agent_emily",
-  "ai_agent_mina",
   "emily_pantheon",
-  "halal_plane",
+  "global-risk-war-room",
+  "ai_agent_emily",
 ];
 
 function getFeaturedProjects() {
   return FEATURED_ORDER.map((name) => PROJECTS.find((p) => p.name === name)).filter(Boolean);
+}
+
+function getLabProjects(lab) {
+  return PROJECTS.filter((p) => p.lab === lab);
+}
+
+function getFlagshipProject(lab) {
+  const flagship = LABS[lab]?.flagship;
+  return PROJECTS.find((p) => p.name === flagship) || getLabProjects(lab)[0];
 }
 
 const PROJECTS = [
@@ -27,7 +48,7 @@ const PROJECTS = [
     title: "Jekyll & Hyde Dual-Persona LLM",
     description: "Jekyll and Hyde dual-persona LLM platform with install package. Self-hosted chat with Gemma 2 2B + LoRA, MCP, and domain packs. Release v1.2.1 install zip.",
     stack: ["Python", "Gemma 2", "LoRA", "MCP", "Self-hosted"],
-    category: "ai",
+    lab: "research",
     featured: true,
     url: `${GITHUB_BASE}/model_JekyllHyde`,
   },
@@ -36,7 +57,7 @@ const PROJECTS = [
     title: "Sereme Hypatia",
     description: "AI mind consulting. Full-stack TypeScript app (Vite, React 19, Express) with Google Gemini API.",
     stack: ["TypeScript", "React 19", "Vite", "Express", "Gemini API"],
-    category: "ai",
+    lab: "research",
     url: `${GITHUB_BASE}/Sereme_Hypatia`,
   },
   {
@@ -44,7 +65,7 @@ const PROJECTS = [
     title: "Zerro AI OS",
     description: "Zerro AI OS — Tactical Swarm OS with Parallel Swarm Engine, Overseer agent, Supabase pgvector RAG, and MCP integration.",
     stack: ["Python", "Supabase", "MCP", "LangChain", "Parallel Swarm"],
-    category: "ai",
+    lab: "production",
     featured: true,
     url: `${GITHUB_BASE}/zerro_ai_landing`,
     external: "https://zerroai.space",
@@ -54,7 +75,7 @@ const PROJECTS = [
     title: "Space Manager",
     description: "Real-time space data games: ISS supply mission and SpaceX tycoon sim. React 18 + Vite 6 + Leaflet, wheretheiss.at API.",
     stack: ["TypeScript", "React 18", "Vite 6", "Leaflet", "ISS API"],
-    category: "games",
+    lab: "viral",
     url: `${GITHUB_BASE}/space_manger`,
   },
   {
@@ -62,7 +83,7 @@ const PROJECTS = [
     title: "Country Janggi",
     description: "Country Janggi — 3D national-unit janggi with Hunyuan meshes and hanja piece labels. Vite, React 18, Three.js, R3F.",
     stack: ["TypeScript", "Three.js", "R3F", "Vite", "Python (assets)"],
-    category: "games",
+    lab: "viral",
     url: `${GITHUB_BASE}/country_janggi`,
   },
   {
@@ -70,7 +91,7 @@ const PROJECTS = [
     title: "Global Culture Risk Dashboard",
     description: "Groq-driven scripts for culture/risk data generation and HTML dashboard visualization.",
     stack: ["HTML", "Python", "Groq API"],
-    category: "global",
+    lab: "viral",
     url: `${GITHUB_BASE}/global_culture_risk_dashboard`,
   },
   {
@@ -78,7 +99,7 @@ const PROJECTS = [
     title: "Emily Travel Editor",
     description: "Next.js 16 + React 19 + Tailwind 4 + Leaflet AI travel editor. Groq API, static export for GitHub Pages.",
     stack: ["TypeScript", "Next.js 16", "React 19", "Tailwind 4", "Groq", "Leaflet"],
-    category: "global",
+    lab: "viral",
     url: `${GITHUB_BASE}/traveleditor`,
   },
   {
@@ -86,7 +107,7 @@ const PROJECTS = [
     title: "Zerro Coder Test",
     description: "Zerro autonomous agent QA smoke test project (Create React App).",
     stack: ["TypeScript", "Create React App"],
-    category: "ai",
+    lab: "research",
     url: `${GITHUB_BASE}/zerro_coder_test`,
   },
   {
@@ -94,7 +115,7 @@ const PROJECTS = [
     title: "Emily PM Agent",
     description: "Streamlit + Groq PM agent (KO/EN). Notion tasks, PM methodologies, SNS thread generation.",
     stack: ["Python", "Streamlit", "Groq API", "Notion API"],
-    category: "ai",
+    lab: "production",
     featured: true,
     url: `${GITHUB_BASE}/ai_agent_emily`,
   },
@@ -103,7 +124,7 @@ const PROJECTS = [
     title: "Lobster Chat Center (Mina)",
     description: "Streamlit multi-agent chat center. Groq + Gemini, Discord reporting, Notion/GitHub/Slack/Sheets tool hooks.",
     stack: ["Python", "Streamlit", "Groq", "Gemini", "Multi-Agent"],
-    category: "ai",
+    lab: "production",
     featured: true,
     url: `${GITHUB_BASE}/ai_agent_mina`,
   },
@@ -112,7 +133,7 @@ const PROJECTS = [
     title: "Lobster Agent Automation",
     description: "LOBSTER AGENT automation: moviepy + gTTS, DuckDuckGo search, SNS/Notion/Slack content workflows.",
     stack: ["Python", "Streamlit", "moviepy", "gTTS", "Groq", "Gemini"],
-    category: "ai",
+    lab: "production",
     url: `${GITHUB_BASE}/ai_agent_mina_automation`,
   },
   {
@@ -120,7 +141,7 @@ const PROJECTS = [
     title: "Red Kernel Bot",
     description: "Node.js + Groq RedKernel persona bot with Moltbook integration.",
     stack: ["JavaScript", "Node.js", "Groq API", "Moltbook"],
-    category: "ai",
+    lab: "viral",
     url: `${GITHUB_BASE}/AI_Red_Kernel_bot`,
   },
   {
@@ -128,7 +149,7 @@ const PROJECTS = [
     title: "AI Sports Edge",
     description: "Groq + Tweepy sports AI bot. Google News/ESPN RSS RAG, Discord webhook workflow.",
     stack: ["Python", "Groq", "Tweepy", "RAG", "Discord Webhook"],
-    category: "ai",
+    lab: "viral",
     url: `${GITHUB_BASE}/AI-Sports-Bot`,
   },
   {
@@ -136,7 +157,7 @@ const PROJECTS = [
     title: "PromptSister — Enterprise Co-Pilot",
     description: "Prompt generator. Role-based prompt builder (Team Manager, HRBP, Ops). Tailwind + marked.js.",
     stack: ["JavaScript", "HTML", "Tailwind CSS"],
-    category: "ai",
+    lab: "production",
     url: `${GITHUB_BASE}/promptsister`,
   },
   {
@@ -144,7 +165,7 @@ const PROJECTS = [
     title: "Emily's AI Pantheon",
     description: "Flutter Web AI Pantheon: tarot, feng shui, saju experiences.",
     stack: ["Dart", "Flutter Web"],
-    category: "ai",
+    lab: "viral",
     featured: true,
     url: `${GITHUB_BASE}/emily_pantheon`,
     external: "https://benjamin5607.github.io/emily_pantheon/",
@@ -154,7 +175,7 @@ const PROJECTS = [
     title: "AI Startup Database",
     description: "Groq + Notion Client startup signal pipeline. Notion DB sync, optional Ghost CMS integration.",
     stack: ["Python", "Groq", "Notion API", "Ghost CMS"],
-    category: "ai",
+    lab: "production",
     url: `${GITHUB_BASE}/AI_start_up_database`,
   },
   {
@@ -162,7 +183,7 @@ const PROJECTS = [
     title: "Global Slang Dictionary",
     description: "Multilingual slang research DB (14 langs). Crawl + LLM semantic analysis, Google Sheets pipeline.",
     stack: ["Python", "LLM", "BeautifulSoup", "Google Sheets"],
-    category: "global",
+    lab: "viral",
     url: `${GITHUB_BASE}/global_slang_dictionary`,
   },
   {
@@ -170,7 +191,7 @@ const PROJECTS = [
     title: "Global Risk Radar v3.0",
     description: "Streamlit + Groq global risk control tower. Model picker, scan scope sidebar.",
     stack: ["Python", "Streamlit", "Groq", "Pandas", "NumPy"],
-    category: "global",
+    lab: "production",
     url: `${GITHUB_BASE}/global-risk-war-room`,
   },
   {
@@ -178,7 +199,7 @@ const PROJECTS = [
     title: "Slang Dictionary Web",
     description: "Flask + Groq + BeautifulSoup slang dictionary. HTML front-end, Flutter pubspec included.",
     stack: ["Python", "Flask", "Groq", "HTML", "Flutter"],
-    category: "global",
+    lab: "viral",
     url: `${GITHUB_BASE}/slang_dictionary`,
   },
   {
@@ -186,7 +207,7 @@ const PROJECTS = [
     title: "Korean War Tactics",
     description: "Korean War browser strategy simulation 1945–1953. 30 scenarios, commander mode, grid tactics.",
     stack: ["JavaScript", "HTML", "CSS"],
-    category: "games",
+    lab: "viral",
     url: `${GITHUB_BASE}/korean_war`,
   },
   {
@@ -194,17 +215,17 @@ const PROJECTS = [
     title: "Halal Plane PWA",
     description: "PWA for Muslim travelers: halal restaurants/cafes/mosques, Amina AI (Groq), GPS, world map.",
     stack: ["HTML", "JavaScript", "PWA", "Groq", "Leaflet"],
-    category: "games",
+    lab: "viral",
     featured: true,
     url: `${GITHUB_BASE}/halal_plane`,
     external: "https://benjamin5607.github.io/halal_plane/",
   },
   {
     name: "drunken_plane",
-    title: "Drunken Plane PWA",
+    title: "Drunken Plane · AI Bartender",
     description: "Single-page PWA with Leaflet, dark/gold theme, manifest support.",
     stack: ["HTML", "JavaScript", "PWA", "Leaflet"],
-    category: "games",
+    lab: "viral",
     url: `${GITHUB_BASE}/drunken_plane`,
   },
   {
@@ -212,7 +233,7 @@ const PROJECTS = [
     title: "Office War",
     description: "12-stage office-themed browser shoot-'em-up. 9:00–21:00 crunch narrative, KO/EN, sprite art.",
     stack: ["JavaScript", "HTML", "CSS"],
-    category: "games",
+    lab: "viral",
     url: `${GITHUB_BASE}/officewar`,
   },
   {
@@ -220,7 +241,7 @@ const PROJECTS = [
     title: "Saigon Class",
     description: "Saigon Class single-page app with Vietnam red/yellow theme, mobile-oriented UI.",
     stack: ["HTML", "CSS"],
-    category: "games",
+    lab: "viral",
     url: `${GITHUB_BASE}/saigon_class`,
   },
   {
@@ -228,7 +249,7 @@ const PROJECTS = [
     title: "Jumadeung Cinema v5",
     description: "Interactive cinema v5: multi-act branching story, SVG assets.",
     stack: ["JavaScript", "HTML", "SVG"],
-    category: "games",
+    lab: "viral",
     url: `${GITHUB_BASE}/jumadeung_cinema`,
   },
   {
@@ -236,7 +257,7 @@ const PROJECTS = [
     title: "K-Tutor Studio / AI Teacher Assistant",
     description: "Node server.mjs + Cloudflare Wrangler + Vercel. Tesseract OCR, PDF/Mammoth/XLSX, YouTube transcript API.",
     stack: ["HTML", "Node.js", "Tesseract OCR", "Cloudflare", "Vercel"],
-    category: "edtech",
+    lab: "production",
     url: `${GITHUB_BASE}/AI-Teacher-Assistant`,
   },
   {
@@ -244,7 +265,7 @@ const PROJECTS = [
     title: "AI Teacher Assistant — Global Edition",
     description: "Global AI Teacher Assistant (English UI). Tesseract, pdf.js, mammoth, xlsx CDN stack.",
     stack: ["HTML", "JavaScript", "Tesseract", "pdf.js", "mammoth"],
-    category: "edtech",
+    lab: "production",
     url: `${GITHUB_BASE}/ai-teacher-assistant-global-edition`,
   },
   {
@@ -252,7 +273,7 @@ const PROJECTS = [
     title: "AI Tutorial Masterclass",
     description: "AI Tutorial hub + course1–3 HTML modules, localized data.js TOC (kids → advanced tracks).",
     stack: ["JavaScript", "HTML"],
-    category: "edtech",
+    lab: "viral",
     url: `${GITHUB_BASE}/ai_tutorial`,
   },
   {
@@ -260,7 +281,7 @@ const PROJECTS = [
     title: "Quartile Coaching Dashboard",
     description: "React 19 + Vite 8 + Chart.js + Dexie SLA vs quota coaching dashboard. gh-pages deploy scripts.",
     stack: ["TypeScript", "React 19", "Vite 8", "Chart.js", "Dexie"],
-    category: "edtech",
+    lab: "production",
     url: `${GITHUB_BASE}/quartile_coaching`,
   },
   {
@@ -268,7 +289,7 @@ const PROJECTS = [
     title: "README Generator & Code Review",
     description: "Groq Llama 3.1 README generator + code review. analyze.js CLI + Streamlit app.py.",
     stack: ["Python", "JavaScript", "Groq Llama 3.1", "Streamlit", "GitHub API"],
-    category: "tools",
+    lab: "production",
     url: `${GITHUB_BASE}/readme_generator`,
   },
   {
@@ -276,7 +297,7 @@ const PROJECTS = [
     title: "Lazy Assignment (Vision Food Captioning)",
     description: "Groq llama-3.2-11b-vision food image captioning. structured_restaurant_data.json output.",
     stack: ["Python", "Groq Vision", "HTML"],
-    category: "tools",
+    lab: "viral",
     url: `${GITHUB_BASE}/lazy_assignment`,
   },
 ];
