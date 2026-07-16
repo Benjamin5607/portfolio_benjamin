@@ -458,7 +458,7 @@ const AI_SKILLS_I18N = {
     {
       group: "Agentic AI & 멀티에이전트 오케스트레이션",
       items: [
-        "Zerro AI OS — Parallel Swarm Engine, Overseer 에이전트, MCP 도구 연동",
+        "Zerro AI — Dev Studio (웹 + Windows 데스크톱), Swarm Engine, Ollama, EN/KO, 에이전트 중심 민트 UI",
         "Jekyll & Hyde — 독립 belief state 듀얼 페르소나 LLM 에이전트",
         "Agent Mina — Discord & 도구 훅 Lobster 멀티에이전트 채팅 센터",
         "LangChain · LangGraph · MCP (Model Context Protocol)",
@@ -496,7 +496,7 @@ const AI_SKILLS_I18N = {
     {
       group: "Agentic AI 与多 Agent 编排",
       items: [
-        "Zerro AI OS — Parallel Swarm Engine、Overseer Agent、MCP 工具集成",
+        "Zerro AI — Dev Studio（Web + Windows 桌面）、Swarm Engine、Ollama、EN/KO、Agent 优先薄荷绿 UI",
         "Jekyll & Hyde — 独立 belief state 双人格 LLM Agent",
         "Agent Mina — Discord 与工具钩子的 Lobster 多 Agent 聊天中心",
         "LangChain · LangGraph · MCP (Model Context Protocol)",
@@ -534,7 +534,7 @@ const AI_SKILLS_I18N = {
     {
       group: "Agentic AI & マルチエージェントオーケストレーション",
       items: [
-        "Zerro AI OS — Parallel Swarm Engine、Overseer エージェント、MCP ツール連携",
+        "Zerro AI — Dev Studio（Web + Windows デスクトップ）、Swarm Engine、Ollama、EN/KO、エージェント中心ミント UI",
         "Jekyll & Hyde — 独立 belief state デュアルペルソナ LLM エージェント",
         "Agent Mina — Discord & ツールフック Lobster マルチエージェントチャット",
         "LangChain · LangGraph · MCP (Model Context Protocol)",

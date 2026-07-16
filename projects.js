@@ -63,8 +63,9 @@ const PROJECTS = [
   {
     name: "zerro_ai_landing",
     title: "Zerro AI OS",
-    description: "Zerro AI OS — Tactical Swarm OS with Parallel Swarm Engine, Overseer agent, Supabase pgvector RAG, and MCP integration.",
-    stack: ["Python", "Supabase", "MCP", "LangChain", "Parallel Swarm"],
+    description:
+      "Zerro AI — multi-agent Workspace OS + Dev Studio. Web IDE (zerroai.space), Windows desktop app, agent-first pastel-mint UI, EN/KO, Swarm Engine, Ollama, GitHub/local deploy.",
+    stack: ["Next.js", "Electron", "TypeScript", "Supabase", "Ollama", "Swarm"],
     lab: "production",
     featured: true,
     url: `${GITHUB_BASE}/zerro_ai_landing`,

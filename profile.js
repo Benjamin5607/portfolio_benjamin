@@ -32,7 +32,7 @@ const LINKEDIN_EN = {
     {
       group: "Agentic AI & Multi-Agent Orchestration",
       items: [
-        "Zerro AI OS — Parallel Swarm Engine, Overseer agent, MCP tool integration",
+        "Zerro AI — Dev Studio (web + Windows desktop), Swarm Engine, Ollama, EN/KO, agent-first mint UI",
         "Jekyll & Hyde — Dual-persona LLM agents with independent belief states",
         "Agent Mina — Lobster multi-agent chat center with Discord & tool hooks",
         "LangChain · LangGraph · MCP (Model Context Protocol)",
