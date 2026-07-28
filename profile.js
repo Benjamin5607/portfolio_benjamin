@@ -15,7 +15,7 @@ const LINKEDIN_EN = {
   aboutParagraphs: [
     "Partner Program Manager with 8+ years of experience in building and governing large-scale platform operations at ByteDance, Google (Webhelp), and Meta (Accenture).",
     "Currently leading global partner programs focused on data support and Trust & Safety. Specializes in transforming complex, high-risk operations into resilient, scalable programs.",
-    "Beyond program management, deeply studying the AI ecosystem — developing local/serverless AI applications using CrewAI, Gradio, and Streamlit, and automating workflows through GitHub Actions. Bridges the gap between technical AI innovation and operational excellence.",
+    "Beyond program management, deeply studying the AI ecosystem — building Zerro AI as a Bring Your Own AI Workspace OS with Dev Studio, API Hub, MCP tools, local/desktop execution, and secure provider-key workflows. Bridges the gap between technical AI innovation and operational excellence.",
   ],
   mission:
     "Specializes in turning fragmented, high-risk operations into scalable, measurable, and resilient global programs.",
@@ -32,7 +32,8 @@ const LINKEDIN_EN = {
     {
       group: "Agentic AI & Multi-Agent Orchestration",
       items: [
-        "Zerro AI — Dev Studio (web + Windows desktop), Swarm Engine, Ollama, EN/KO, agent-first mint UI",
+        "Zerro AI — BYO AI Workspace OS, Swarm Engine, API Hub, token dashboard, MCP tools, EN/KO",
+        "Zerro Dev Studio — Web IDE + Windows Desktop v0.2.8 + local CLI, Ollama one-click, native Shell/filesystem",
         "Jekyll & Hyde — Dual-persona LLM agents with independent belief states",
         "Agent Mina — Lobster multi-agent chat center with Discord & tool hooks",
         "LangChain · LangGraph · MCP (Model Context Protocol)",
@@ -41,7 +42,8 @@ const LINKEDIN_EN = {
     {
       group: "LLM, RAG & Model Engineering",
       items: [
-        "Groq API · Gemini API · Native JSON schema tool calling",
+        "Groq · Gemini · DeepSeek · Cerebras · NVIDIA NIM · Ollama provider routing",
+        "Native JSON schema tool calling · Vercel proxy + HttpOnly API-key vault",
         "Gemma 2 2B + LoRA fine-tuning · self-hosted inference",
         "Supabase pgvector RAG · auto-compression · long-term memory",
         "ReAct agent loops · prompt engineering · dual-persona design",
@@ -59,9 +61,10 @@ const LINKEDIN_EN = {
     {
       group: "Integrations & Agent Tooling",
       items: [
+        "Zerro connected tools — Free Web Search, Web Scraper, Data Analyzer, Calculator, Wikipedia, Translator, RSS",
         "Notion API · Slack · Discord webhooks · GitHub API",
         "Lark/Feishu Bitable · Google Sheets · BeautifulSoup crawlers",
-        "moviepy + gTTS content automation · DuckDuckGo search tools",
+        "MCP server registration · NOW / ONCE / REPEAT scheduling · DuckDuckGo search tools",
         "Trust & Safety context — policy-driven AI workflow design",
       ],
     },
