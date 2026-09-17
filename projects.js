@@ -64,8 +64,8 @@ const PROJECTS = [
     name: "zerro_ai_landing",
     title: "Zerro AI OS",
     description:
-      "Zerro AI — multi-agent Workspace OS + Dev Studio. Web IDE (zerroai.space), Windows desktop app, agent-first pastel-mint UI, EN/KO, Swarm Engine, Ollama, GitHub/local deploy.",
-    stack: ["Next.js", "Electron", "TypeScript", "Supabase", "Ollama", "Swarm"],
+      "Zerro AI — Workspace OS + Dev Studio. Web IDE (zerroai.space), Windows desktop, Swarm Engine, Legal/L10n plugins, Ops (/ops), NVIDIA NIM default deepseek-v4-flash (llama-3.3-70b EOL/410), P0–P3 competitive MVP.",
+    stack: ["Next.js", "Electron", "TypeScript", "NVIDIA NIM", "Supabase", "Swarm"],
     lab: "production",
     featured: true,
     url: `${GITHUB_BASE}/zerro_ai_landing`,

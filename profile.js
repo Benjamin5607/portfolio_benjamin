@@ -32,7 +32,7 @@ const LINKEDIN_EN = {
     {
       group: "Agentic AI & Multi-Agent Orchestration",
       items: [
-        "Zerro AI — Dev Studio (web + Windows desktop), Swarm Engine, Ollama, EN/KO, agent-first mint UI",
+        "Zerro AI — Dev Studio (web + Windows), Swarm, Legal/L10n, Ops (/ops), NVIDIA NIM deepseek-v4-flash, P0–P3 MVP",
         "Jekyll & Hyde — Dual-persona LLM agents with independent belief states",
         "Agent Mina — Lobster multi-agent chat center with Discord & tool hooks",
         "LangChain · LangGraph · MCP (Model Context Protocol)",
@@ -41,7 +41,7 @@ const LINKEDIN_EN = {
     {
       group: "LLM, RAG & Model Engineering",
       items: [
-        "Groq API · Gemini API · Native JSON schema tool calling",
+        "Groq · NVIDIA NIM (deepseek-v4-flash) · Gemini · Native JSON schema tool calling",
         "Gemma 2 2B + LoRA fine-tuning · self-hosted inference",
         "Supabase pgvector RAG · auto-compression · long-term memory",
         "ReAct agent loops · prompt engineering · dual-persona design",

@@ -458,7 +458,7 @@ const AI_SKILLS_I18N = {
     {
       group: "Agentic AI & 멀티에이전트 오케스트레이션",
       items: [
-        "Zerro AI — Dev Studio (웹 + Windows 데스크톱), Swarm Engine, Ollama, EN/KO, 에이전트 중심 민트 UI",
+        "Zerro AI — Dev Studio (웹 + Windows), Swarm, Legal/L10n, Ops (/ops), NVIDIA NIM deepseek-v4-flash, P0–P3 MVP",
         "Jekyll & Hyde — 독립 belief state 듀얼 페르소나 LLM 에이전트",
         "Agent Mina — Discord & 도구 훅 Lobster 멀티에이전트 채팅 센터",
         "LangChain · LangGraph · MCP (Model Context Protocol)",
@@ -467,7 +467,7 @@ const AI_SKILLS_I18N = {
     {
       group: "LLM, RAG & 모델 엔지니어링",
       items: [
-        "Groq API · Gemini API · Native JSON schema tool calling",
+        "Groq · NVIDIA NIM (deepseek-v4-flash) · Gemini · Native JSON schema tool calling",
         "Gemma 2 2B + LoRA 파인튜닝 · self-hosted inference",
         "Supabase pgvector RAG · 자동 압축 · 장기 메모리",
         "ReAct agent loop · 프롬프트 엔지니어링 · 듀얼 페르소나 설계",
@@ -496,7 +496,7 @@ const AI_SKILLS_I18N = {
     {
       group: "Agentic AI 与多 Agent 编排",
       items: [
-        "Zerro AI — Dev Studio（Web + Windows 桌面）、Swarm Engine、Ollama、EN/KO、Agent 优先薄荷绿 UI",
+        "Zerro AI — Dev Studio（Web + Windows）、Swarm、Legal/L10n、Ops (/ops)、NVIDIA NIM deepseek-v4-flash、P0–P3 MVP",
         "Jekyll & Hyde — 独立 belief state 双人格 LLM Agent",
         "Agent Mina — Discord 与工具钩子的 Lobster 多 Agent 聊天中心",
         "LangChain · LangGraph · MCP (Model Context Protocol)",
@@ -505,7 +505,7 @@ const AI_SKILLS_I18N = {
     {
       group: "LLM、RAG 与模型工程",
       items: [
-        "Groq API · Gemini API · Native JSON schema 工具调用",
+        "Groq · NVIDIA NIM (deepseek-v4-flash) · Gemini · Native JSON schema 工具调用",
         "Gemma 2 2B + LoRA 微调 · 自托管推理",
         "Supabase pgvector RAG · 自动压缩 · 长期记忆",
         "ReAct Agent 循环 · 提示工程 · 双人格设计",
@@ -534,7 +534,7 @@ const AI_SKILLS_I18N = {
     {
       group: "Agentic AI & マルチエージェントオーケストレーション",
       items: [
-        "Zerro AI — Dev Studio（Web + Windows デスクトップ）、Swarm Engine、Ollama、EN/KO、エージェント中心ミント UI",
+        "Zerro AI — Dev Studio（Web + Windows）、Swarm、Legal/L10n、Ops (/ops）、NVIDIA NIM deepseek-v4-flash、P0–P3 MVP",
         "Jekyll & Hyde — 独立 belief state デュアルペルソナ LLM エージェント",
         "Agent Mina — Discord & ツールフック Lobster マルチエージェントチャット",
         "LangChain · LangGraph · MCP (Model Context Protocol)",
@@ -543,7 +543,7 @@ const AI_SKILLS_I18N = {
     {
       group: "LLM、RAG & モデルエンジニアリング",
       items: [
-        "Groq API · Gemini API · Native JSON schema ツールコーリング",
+        "Groq · NVIDIA NIM (deepseek-v4-flash) · Gemini · Native JSON schema ツールコーリング",
         "Gemma 2 2B + LoRA ファインチューニング · セルフホスト推論",
         "Supabase pgvector RAG · 自動圧縮 · 長期メモリ",
         "ReAct エージェントループ · プロンプトエンジニアリング · デュアルペルソナ設計",
